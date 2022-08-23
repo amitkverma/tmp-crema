@@ -1,0 +1,63 @@
+@import '../../../../shared/styles/variable';
+
+.customer-scrollbar {
+  height: 280px;
+}
+
+.customItem {
+  display: flex;
+  align-items: center;
+  padding: 8px 20px;
+  flex-wrap: nowrap;
+
+  & .ant-avatar {
+    min-width: 48px;
+    height: 48px;
+    margin-right: 16px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 16px;
+    }
+  }
+}
+
+.contentArea {
+  font-size: @font-size-base;
+  color: @text-color-secondary;
+
+  & h3 {
+    margin-bottom: 2px;
+    font-weight: @font-weight-medium;
+    color: @text-color;
+    font-size: @font-size-base;
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.contentAction {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+.badgeRoot {
+  padding: 3px 10px;
+  border-radius: 15px;
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 12px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+}

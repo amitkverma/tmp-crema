@@ -1,0 +1,54 @@
+@import '../../../shared/styles/variable';
+
+.portfolio {
+  width: 100%;
+}
+
+.portfolio-header {
+  max-width: 672px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 24px;
+
+  & h2 {
+    color: @text-color;
+    margin-bottom: 16px;
+    font-weight: @font-weight-medium;
+    font-size: 20px;
+  }
+
+  & p {
+    color: @text-color-secondary;
+    margin-bottom: 12px;
+  }
+}
+
+.portfolio-tabs {
+  & .ant-tabs-nav {
+    margin-bottom: 20px;
+  }
+
+  & .ant-tabs-nav-wrap .ant-tabs-nav-list,
+  & .ant-tabs-nav-wrap {
+    justify-content: center;
+  }
+
+  & .ant-tabs-tab {
+    font-size: @font-size-lg;
+    min-width: 10px;
+    text-transform: capitalize;
+    color: @text-color;
+    padding: 6px 12px;
+    margin: 0;
+    min-height: 48px;
+  }
+
+  & .ant-tabs-content-holder {
+    margin-bottom: 30px;
+  }
+
+  & .react-photo-gallery--gallery img {
+    border-radius: @card-radius;
+  }
+}

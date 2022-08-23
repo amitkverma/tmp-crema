@@ -1,0 +1,61 @@
+@import '../../../../shared/styles/variable';
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & .title {
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: @font-size-base;
+
+    @media screen and (min-width: @screen-md) {
+      margin-bottom: 16px;
+      margin-top: 8px;
+    }
+  }
+}
+
+.profile-content-action {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.profile-action-item {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-action-item-content {
+  padding: 20px 8px;
+  width: 50%;
+  color: @text-color-secondary;
+
+  & h5 {
+    color: @text-color;
+    font-size: @font-size-base;
+    margin-bottom: 0;
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.profile-right-border {
+  border-right: @border-style-base @border-width-base darken(@border-color-base, 2);
+
+  [dir=rtl] & {
+    border-right: 0 none;
+    border-left: @border-style-base @border-width-base darken(@border-color-base, 2);
+  }
+}
+
+.profile-top-border {
+  border-top: @border-style-base @border-width-base darken(@border-color-base, 2);
+}
+

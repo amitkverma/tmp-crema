@@ -1,0 +1,46 @@
+@import '../../../../shared/styles/variable';
+
+.latest-result-item {
+  position: relative;
+  border-bottom: 0 none !important;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.latest-result-first-items {
+  display: flex;
+  align-items: center;
+  width: 60%;
+
+  & h3 {
+    white-space: nowrap;
+    font-size: @font-size-base;
+    font-weight: @font-weight-medium;
+    color: @text-color;
+    margin-bottom: 0;
+  }
+
+  & p {
+    white-space: nowrap;
+    margin-left: 4px;
+    color: @text-color-secondary;
+    margin-bottom: 0;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: 4px;
+    }
+  }
+}
+
+.latest-result-second-items {
+  padding-left: 12px;
+  width: 40%;
+
+  [dir=rtl] & {
+    padding-left: 0;
+    padding-right: 12px;
+  }
+}

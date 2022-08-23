@@ -1,0 +1,73 @@
+@import '../../../../shared/styles/variable';
+
+.stories-card {
+  margin-bottom: 32px;
+}
+
+.stories-row {
+  display: flex;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.stories-col {
+  width: 50%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.stories-item-card {
+  position: relative;
+}
+
+.stories-card-media {
+  width: 100%;
+  min-height: 160px;
+  border-radius: @border-radius-base;
+}
+
+.stories-user-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 30px 10px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: @text-color-white;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, rgba(120, 130, 146, 0) 7.29%, #788292 100%);
+    border-bottom-left-radius: @border-radius-base;
+    border-bottom-right-radius: @border-radius-base;
+    opacity: 0.65;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 3;
+  }
+}
+
+.stories-user-info-avatar {
+  width: 40px;
+  height: 40px;
+  border: @border-style-base 2px @primary-color;
+  background-color: @component-background;
+  padding: 2px;
+  margin-bottom: 5px;
+}
+
+.stories-user-info-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0;
+}

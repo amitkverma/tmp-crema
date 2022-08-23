@@ -1,0 +1,64 @@
+@import '../../../../shared/styles/variable';
+
+.wid-profile-card {
+  & .ant-card-body {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.wid-profile-info {
+  margin-bottom: 32px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  & h3 {
+    font-size: @font-size-lg;
+    font-weight: @font-weight-bold;
+    margin-bottom: 0;
+  }
+}
+
+.wid-profile-avatar {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 32px;
+  @media screen and (min-width: @screen-md) {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.wid-profile-action {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 4px;
+  color: @text-color-secondary;
+}
+
+.wid-profile-action-item {
+  padding-left: 8px;
+  padding-right: 8px;
+  overflow: hidden;
+
+  @media screen and (min-width: @screen-xxl) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  & h2 {
+    margin-bottom: 8px;
+    font-weight: @font-weight-medium;
+    font-size: 20px;
+  }
+
+  & p {
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+}

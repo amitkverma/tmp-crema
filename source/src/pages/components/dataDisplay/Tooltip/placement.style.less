@@ -1,0 +1,22 @@
+@import '../../../../shared/styles/variable';
+.tooltip-placement {
+  & .ant-btn {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    width: 70px;
+    text-align: center;
+    padding: 0;
+  }
+}
+
+.tooltip-left {
+  @media screen and (max-width: @screen-xs-max) {
+    margin-left: 6px !important;
+  }
+}
+
+.tooltip-right {
+  @media screen and (max-width: @screen-xs-max) {
+    margin-left: 225px !important;
+  }
+}

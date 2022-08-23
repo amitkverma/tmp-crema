@@ -1,0 +1,87 @@
+@import '../../../../shared/styles/variable';
+
+.add-tags-content {
+  background-color: darken(@component-background, 6.8);
+  border-radius: @card-radius;
+  padding: 8px;
+}
+
+.tag-badge {
+  font-size: @font-size-base;
+  margin: 8px;
+  padding: 5px 12px;
+  color: @text-color-white;
+  border-radius: 30px;
+}
+
+.tag-badge-btn {
+  background-color: fade(@black, 26);
+  color: @text-color-white;
+  border: 0 none;
+  padding: 2px 0 0;
+  box-shadow: none;
+  border-radius: @border-radius-circle;
+  width: 22px;
+  height: 22px;
+  font-size: @font-size-sm;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+
+  &:focus, &:hover {
+    background-color: fade(@black, 26);
+    color: @text-color-white;
+  }
+}
+
+.add-tags-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.add-new-tag-link {
+  cursor: pointer;
+  margin: 8px 8px 8px 12px;
+  color: @secondary-color;
+  font-size: @font-size-lg;
+  font-weight: @font-weight-medium;
+
+  [dir=rtl] & {
+    margin: 8px 12px 8px 8px;
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    font-size: 18px;
+  }
+}
+
+.add-new-tag-row {
+  display: flex;
+  align-items: center;
+  margin: 8px;
+}
+
+.tag-check {
+  margin-left: 12px;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+}
+
+.tag-close {
+  margin-left: 12px;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+}

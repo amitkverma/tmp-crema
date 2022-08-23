@@ -1,0 +1,91 @@
+@import '../../../../shared/styles/variable';
+@import '../../../../shared/styles/mixin';
+
+.product-image-slide {
+  position: relative;
+}
+
+.product-image-slide-root {
+  position: relative;
+  display: flex;
+
+  & .BrainhubCarousel__container {
+    margin-left: 10px;
+    border-radius: 10px;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+
+    @media screen and (max-width: @screen-sm) {
+      margin-bottom: 20px;
+    }
+
+    & .BrainhubCarousel {
+      height: 100%;
+    }
+  }
+
+  & .BrainhubCarousel__dots {
+    flex-direction: column;
+
+    @media screen and (max-width: @screen-sm) {
+      display: none;
+    }
+
+
+    & .BrainhubCarousel__thumbnail {
+      opacity: 1;
+      background-color: transparent;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      border: @border-style-base @border-width-base @border-color-base;
+
+      &.BrainhubCarousel__thumbnail--selected {
+        border: @border-style-base 2px @grey-600;
+      }
+    }
+
+    & img {
+      height: 80px;
+    }
+  }
+}
+
+.product-favorite {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  font-size: 20px;
+  cursor: pointer;
+
+  [dir=rtl] & {
+    right: auto;
+    left: 10px;
+  }
+}
+
+.product-image-slide-action {
+  display: flex;
+  justify-content: center;
+
+  @media screen and (min-width: @screen-md) {
+    padding-left: 20px;
+
+    [dir=rtl] & {
+      padding-left: 0;
+      padding-right: 20px;
+    }
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    padding-left: 60px;
+
+    [dir=rtl] & {
+      padding-left: 0;
+      padding-right: 60px;
+    }
+  }
+}

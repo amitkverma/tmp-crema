@@ -1,0 +1,129 @@
+@import '../../../../shared/styles/variable';
+
+.total-balance-card {
+  color: @text-color-secondary;
+  height: calc(100% - 38px);
+
+  & .ant-card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+.total-balance-header {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media screen and (min-width: @screen-md) {
+    margin-bottom: 28px;
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-bottom: 32px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  & .ant-column {
+    margin-bottom: 5px;
+  }
+}
+
+.total-balance-title {
+  color: @text-color;
+  font-weight: @font-weight-medium;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.total-balance-title-sm {
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  white-space: nowrap;
+}
+
+.total-balance-btn-view {
+  display: flex;
+  align-items: flex-start;
+
+  & .btn {
+    font-weight: @font-weight-bold;
+    text-transform: uppercase;
+    width: 96px;
+    font-size: @font-size-base;
+    height: auto;
+    line-height: 1;
+
+    &:not(:first-child) {
+      margin-left: 10px;
+
+      [dir=rtl] & {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  & .btn-white {
+    background-color: @white;
+    color: @black;
+    border-color: @white;
+
+    &:hover, &:focus {
+      background-color: @white;
+      border-color: @white;
+      color: @black;
+    }
+  }
+}
+
+.total-balance-para-middle {
+  font-size: @font-size-base;
+  color: @text-color-secondary;
+  text-transform: uppercase;
+
+}
+
+.total-balance-footer {
+  position: relative;
+  margin-top: auto;
+}
+
+.coin-info-row {
+  margin-left: -8px;
+  margin-right: -8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-bottom: 4px;
+  }
+}
+
+.coin-info-col {
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: @font-size-base;
+  color: @text-color-secondary;
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-top: 12px;
+  }
+
+  & h3 {
+    font-size: 20px;
+    font-weight: @font-weight-bold;
+    color: @primary-color;
+    margin-bottom: 0;
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+

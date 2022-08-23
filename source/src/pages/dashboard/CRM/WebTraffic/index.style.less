@@ -1,0 +1,31 @@
+@import '../../../../shared/styles/variable';
+
+.web-traffic-card {
+  margin-bottom: 20px;
+  @media screen and (min-width: @screen-md) {
+    margin-bottom: 32px;
+  }
+}
+
+.web-traffic-content {
+  padding-top: 16px;
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.web-traffic-item {
+  position: relative;
+  font-size: @font-size-base;
+  color: @text-color-secondary;
+
+  & h4 {
+    margin-bottom: 8px;
+    font-weight: @font-weight-medium;
+    font-size: 18px;
+    @media screen and (min-width: @screen-xxl) {
+      font-size: 20px;
+    }
+  }
+}
+

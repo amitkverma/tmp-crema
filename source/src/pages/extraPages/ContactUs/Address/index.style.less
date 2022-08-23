@@ -1,0 +1,59 @@
+@import '../../../../shared/styles/variable';
+
+.contact-address {
+  position: relative;
+
+  @media screen and (min-width: @screen-lg) {
+    margin-left: 20px;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: 20px;
+    }
+  }
+}
+
+.contact-address-item {
+  background-color: @body-background;
+  border-radius: @border-radius-base;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 14px 20px;
+
+  & p {
+    margin-bottom: 0;
+  }
+
+  & .avatar-icon {
+    width: 40px;
+    height: 40px;
+    background-color: @component-background;
+    color: @primary-color;
+    border-radius: @border-radius-circle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 14px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 14px;
+    }
+
+    @media screen and (min-width: @screen-md) {
+      margin-right: 16px;
+      width: 48px;
+      height: 48px;
+
+      [dir=rtl] & {
+        margin-right: 0;
+        margin-left: 16px;
+      }
+    }
+
+    & svg {
+      font-size: 20px;
+    }
+  }
+}

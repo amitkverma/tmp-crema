@@ -1,0 +1,73 @@
+@import '../../../../shared/styles/variable';
+
+.suggestion-card {
+  position: relative;
+
+  & .ant-card-actions {
+    background-color: transparent;
+  }
+}
+
+.suggestion-item {
+  padding: 8px 20px;
+  display: flex;
+}
+
+.suggestion-avatar {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 10px;
+
+  @media screen and (min-width: @screen-lg) {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+  }
+}
+
+.suggestion-item-content {
+  margin-left: 14px;
+  flex: 1;
+
+  @media screen and (min-width: @screen-lg) {
+    margin-left: 16px;
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-left: 16px;
+  }
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 14px;
+
+    @media screen and (min-width: @screen-lg) {
+      margin-right: 16px;
+    }
+
+    @media screen and (min-width: @screen-xxl) {
+      margin-right: 16px;
+    }
+  }
+
+  & h4 {
+    margin-bottom: 2px;
+    font-weight: @font-weight-medium;
+  }
+
+  & p {
+    color: @text-color-secondary;
+    margin-bottom: 0;
+  }
+}
+
+.suggestion-action {
+  color: @primary-color;
+}

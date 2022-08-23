@@ -1,0 +1,49 @@
+@import '../../../../shared/styles/variable';
+
+.earning-graph {
+  & text {
+    fill: @text-color;
+  }
+}
+
+.earning-list-view {
+  border-top: @border-style-base @border-width-base @border-color-base;
+  padding-top: 12px;
+  margin-top: 12px;
+
+  & li.ant-list-item {
+    padding-bottom: 8px;
+    padding-top: 0;
+    border-bottom: 0 none;
+    justify-content: flex-start;
+  }
+}
+
+.earning-dot {
+  height: 12px;
+  width: 12px;
+  margin-right: 16px;
+  border-radius: @border-radius-circle;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 16px;
+  }
+}
+
+.earning-text {
+  margin-bottom: 0;
+  font-size: @font-size-base;
+}
+
+.earning-action {
+  font-size: @font-size-base;
+  font-weight: @font-weight-bold;
+  margin-left: auto;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+

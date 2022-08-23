@@ -1,0 +1,371 @@
+@import '../../../../shared/styles/variable';
+
+.mail-list-desktop {
+  display: none;
+
+  @media screen and (min-width: @screen-sm) {
+    display: block;
+  }
+}
+
+.mail-list-mobile {
+  display: block;
+
+  @media screen and (min-width: @screen-sm) {
+    display: none;
+  }
+}
+
+.mail-list {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.mail-list-item {
+  font-weight: @font-weight-regular;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: @border-width-base @border-style-base @border-color-base;
+  padding: 8px 24px;
+  cursor: pointer;
+  justify-content: flex-start;
+
+  @media screen and (min-width: @screen-sm) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+
+  &.mailRead {
+    background-color: fade(@black, 3);
+  }
+
+  &:hover {
+    & .mail-list-btn-action {
+      opacity: 1;
+      visibility: visible;
+      width: 144px;
+    }
+
+    & .mail-list-time, & .mail-tag-view {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    & .mail-list-sub {
+      width: calc(100% - 145px);
+    }
+  }
+}
+
+.mail-search {
+  position: relative;
+  max-width: 165px;
+  margin-left: 12px;
+  margin-right: 12px;
+
+  & .ant-input {
+    padding: 8px 14px;
+    height: 36px;
+  }
+
+  & .ant-input-search-button {
+    height: 36px;
+    width: 36px;
+    box-shadow: none;
+
+    & .anticon svg {
+      display: block;
+    }
+  }
+}
+
+.apps-mail-footer {
+  display: block;
+
+  @media screen and (min-width: @screen-sm) {
+    display: none;
+  }
+}
+
+.mail-content-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.mail-content-header-checkbox {
+  margin-right: 10px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+}
+
+.mail-content-header-pagination {
+  margin-left: auto;
+  display: flex;align-items: center;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  @media screen and (max-width: @screen-xs-max) {
+    display: none;
+  }
+}
+
+.mail-checked-action {
+  display: flex;
+  align-items: center;
+}
+
+.mail-list-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  @media screen and (min-width: @screen-sm) {
+    width: auto;
+  }
+
+  & .mail-list-time {
+    font-size: @font-size-sm;
+    width: auto;
+
+    @media screen and (min-width: @screen-sm) {
+      display: none;
+    }
+  }
+}
+
+.mail-list-checkbox {
+  padding-right: 10px;
+  display: inline-block;
+
+  [dir=rtl] & {
+    padding-right: 0;
+    padding-left: 10px;
+  }
+}
+
+.mail-list-starred {
+  //display: none;
+  padding-right: 10px;
+  font-size: 20px;
+
+  [dir=rtl] & {
+    padding-right: 0;
+    padding-left: 10px;
+  }
+
+  @media screen and (min-width: @screen-sm) {
+    display: inline-block;
+  }
+}
+
+.mail-list-avatar {
+  margin-right: 14px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 18px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 14px;
+  }
+}
+
+.mail-list-title {
+  margin-bottom: 0;
+  font-weight: @font-weight-medium;
+  color: @heading-color;
+
+  @media screen and (min-width: @screen-sm) {
+    width: 120px;
+  }
+
+  .mailRead & {
+    font-weight: @font-weight-regular;
+    color: @text-color;
+  }
+}
+
+.mail-dots-view {
+  padding-left: 8px;
+
+  @media screen and (min-width: @screen-sm) {
+    margin-left: auto;
+  }
+
+  [dir=rtl] & {
+    padding-left: 0;
+    padding-right: 8px;
+
+    @media screen and (min-width: @screen-sm) {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+}
+
+.mail-dots {
+  height: 12px;
+  width: 12px;
+  border-radius: @border-radius-circle;
+  display: block;
+}
+
+.mail-tag-view {
+  padding-left: 12px;
+  transition: all 0.4s ease;
+
+  [dir=rtl] & {
+    padding-left: 0;
+    padding-right: 12px;
+  }
+}
+
+.mail-tag {
+  font-size: 18px;
+
+  @media screen and (min-width: @screen-lg) {
+    font-size: 20px;
+  }
+
+  & svg {
+    display: block;
+  }
+}
+
+.mail-list-action {
+  width: 100%;
+  padding: 8px 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+
+  @media screen and (min-width: @screen-sm) {
+    width: calc(100% - 245px);
+    padding: 0 0 0 16px;
+    margin-left: auto;
+
+    [dir=rtl] & {
+      padding-left: 0;
+      padding-right: 16px;
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
+  & .mail-list-time {
+    display: none;
+
+    @media screen and (min-width: @screen-sm) {
+      display: flex;
+    }
+  }
+}
+
+.mail-list-sub {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.4s ease;
+
+  @media screen and (min-width: @screen-sm) {
+    width: calc(100% - 100px);
+  }
+}
+
+.mail-list-sub-title {
+  font-weight: @font-weight-medium;
+  color: @heading-color;
+  margin-bottom: 0;
+  white-space: nowrap;
+
+  .mailRead & {
+    font-weight: @font-weight-regular;
+    color: @text-color;
+  }
+}
+
+.mail-description {
+  color: @text-color-secondary;
+  margin-left: 8px;
+  margin-bottom: 0;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 8px;
+  }
+
+  & p {
+    margin-bottom: 0;
+    display: inline;
+
+    &:not(:first-child) {
+      margin-left: 4px;
+
+      [dir=rtl] & {
+        margin-left: 0;
+        margin-right: 4px;
+      }
+    }
+  }
+}
+
+.mail-list-time {
+  padding-left: 8px;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: all 0.4s ease;
+
+  [dir=rtl] & {
+    padding-left: 0;
+    padding-right: 8px;
+  }
+}
+
+.mail-list-date {
+  padding-left: 8px;
+  white-space: pre;
+
+  [dir=rtl] & {
+    padding-left: 0;
+    padding-right: 8px;
+  }
+}
+
+.mail-list-btn-action {
+  display: flex;
+  align-items: center;
+  top: 50%;
+  right: 0;
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+  transform: translateY(-50%);
+  transition: all 0.4s ease;
+  visibility: hidden;
+  flex-direction: row;
+  overflow: hidden;
+  width: 0;
+
+  [dir=rtl] & {
+    right: auto;
+    left: 0;
+  }
+}

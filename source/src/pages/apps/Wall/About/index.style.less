@@ -1,0 +1,77 @@
+@import '../../../../shared/styles/variable';
+
+.wall-about-card {
+  margin-bottom: 32px;
+}
+
+.wall-about-item {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &:first-child {
+    align-items: flex-start;
+  }
+
+  &:hover .wall-about-btn {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:hover a, &:focus a {
+    color: @primary-color;
+  }
+
+  & a {
+    text-decoration: none;
+    word-break: break-all;
+    color: @text-color;
+  }
+
+  & .material-icons {
+    display: block;
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.wall-about-item-icon {
+  margin-right: 14px;
+  font-size: @font-size-lg;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 14px;
+  }
+
+  & svg {
+    display: block;
+  }
+}
+
+.wall-about-btn-view {
+  margin-left: auto;
+  margin-right: -8px;
+  margin-top: -8px;
+
+  [dir=rtl] & {
+    margin-left: -8px;
+    margin-right: auto;
+  }
+}
+
+.wall-about-btn {
+  color: @primary-color;
+  padding: 8px;
+  opacity: 0;
+  visibility: hidden;
+
+  & .MuiSvgIcon-root {
+    font-size: 20px;
+  }
+}

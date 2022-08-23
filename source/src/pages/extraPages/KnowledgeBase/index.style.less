@@ -1,0 +1,105 @@
+@import '../../../shared/styles/variable';
+
+.know-base {
+  width: 100%;
+}
+
+.know-base-header {
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  & h2 {
+    color: @text-color;
+    margin-bottom: 24px;
+    font-size: 20px;
+    font-weight: @font-weight-medium;
+  }
+}
+
+.know-search {
+  & .ant-btn {
+
+    [dir=rtl] & {
+      border-radius: @border-radius-base 0 0 @border-radius-base !important;
+    }
+  }
+
+  & .ant-input-group .ant-input {
+    height: 36px;
+  }
+}
+
+.know-divider {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  @media screen and (min-width: @screen-sm) {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: @screen-lg) {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  @media screen and (min-width: @screen-xxl) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.know-section {
+  margin-bottom: 8px;
+
+  & h3 {
+    color: @text-color;
+    margin-bottom: 16px;
+    font-size: @font-size-lg;
+    font-weight: @font-weight-bold;
+    @media screen and (min-width: @screen-lg) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.know-sale {
+  margin-bottom: 16px;
+  @media screen and (min-width: @screen-lg) {
+    margin-bottom: 40px;
+  }
+}
+
+.know-kb-card {
+  & .ant-card-body {
+    padding: 20px;
+  }
+
+  & h5 {
+    margin-bottom: 8px;
+    font-size: @font-size-lg;
+    font-weight: @font-weight-medium;
+  }
+}
+
+.know-kb-scrollbar {
+  margin-bottom: 20px;
+  height: 130px;
+}
+
+.know-badge-group {
+  margin-left: -8px;
+  margin-right: -8px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.know-badge {
+  font-size: @font-size-base;
+  text-transform: uppercase;
+  border-radius: 30px;
+  border: @border-style-base @border-width-base @border-color-base;
+  margin: 8px;
+  font-weight: @font-weight-medium;
+  padding: 5px 12px;
+}

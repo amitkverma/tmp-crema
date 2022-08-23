@@ -1,0 +1,32 @@
+@import '../../../../shared/styles/variable';
+
+.photo-card {
+  margin-bottom: 32px;
+}
+
+.photos-link {
+  margin: 16px -20px 0;
+  padding: 12px 20px 0;
+  border-top: @border-style-base @border-width-base @border-color-base;
+  color: @primary-color;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+}
+
+.photo-avatar {
+  display: block;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.photo-row {
+  margin-left: -4px !important;
+  margin-right: -4px !important;
+
+  & > .ant-col {
+    margin-bottom: 0;
+    padding: 4px !important;
+  }
+}

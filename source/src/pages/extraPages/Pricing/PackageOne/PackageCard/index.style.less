@@ -1,0 +1,177 @@
+@import '../../../../../shared/styles/variable';
+
+.pricing-wrapper {
+  padding-top: 10px;
+  position: relative;
+
+  & .tag {
+    position: absolute;
+    left: 30px;
+    top: 0;
+    z-index: 1;
+    padding: 2px 5px;
+    min-width: 70px;
+    font-size: 12px;
+    font-weight: @font-weight-bold;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: @border-radius-base;
+
+    [dir=rtl] & {
+      left: auto;
+      right: 30px;
+    }
+  }
+}
+
+.pricing-one-card {
+  padding: 20px 30px;
+  border-radius: @card-radius;
+  border: @border-width-base @border-style-base @border-color-base;
+  position: relative;
+  overflow: hidden;
+
+  & .popular {
+    position: absolute;
+    right: -30px;
+    top: -10px;
+    z-index: 0;
+    max-width: 120px;
+    display: flex;
+
+    [dir=rtl] & {
+      right: auto;
+      left: -30px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: -50px;
+      bottom: -20px;
+      z-index: -1;
+      width: 200px;
+      height: 200px;
+      border-radius: @border-radius-circle;
+      background-color: @body-background;
+
+      [dir=rtl] & {
+        right: auto;
+        left: -50px;
+      }
+    }
+
+    & svg {
+      font-size: @font-size-base;
+      margin-right: 10px;
+      margin-top: 5px;
+
+      [dir=rtl] & {
+        margin-right: 0;
+        margin-left: 10px;
+      }
+    }
+
+    & p {
+      font-size: @font-size-sm;
+
+      @media screen and (min-width: @screen-xl) {
+        font-size: @font-size-base;
+      }
+    }
+  }
+
+  & .ant-card-body {
+    padding: 0;
+  }
+}
+
+.pricing-one-card-header {
+  position: relative;
+  padding-right: 20px;
+
+  [dir=rtl] & {
+    padding-right: 0;
+    padding-left: 20px;
+  }
+}
+
+.pricing-one-card-header-title {
+  font-weight: @font-weight-bold;
+  font-size: 20px;
+  margin-bottom: 6px;
+  position: relative;
+  z-index: 3;
+
+  @media screen and (min-width: @screen-md) {
+    font-size: 32px;
+  }
+
+  @media screen and (min-width: @screen-lg) {
+    font-size: 36px;
+  }
+}
+
+.pricing-one-card-header-subtitle {
+  font-size: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 3;
+
+  @media screen and (min-width: @screen-md) {
+    font-size: 22px;
+  }
+
+  @media screen and (min-width: @screen-lg) {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  & span {
+    font-weight: @font-weight-bold;
+  }
+}
+
+.pricing-one-btn-view {
+  margin-bottom: 30px;
+}
+
+.pricing-one-btn {
+  width: 100%;
+  font-weight: @font-weight-bold;
+  color: @text-color;
+  max-height: 46px;
+  border-radius: 30px;
+  border: solid 2px transparent;
+
+  &:hover, &:focus {
+    color: @text-color;
+  }
+}
+
+.pricing-one-card-list {
+  position: relative;
+
+  & li {
+    padding: 0;
+    margin-bottom: 16px;
+    justify-content: flex-start;
+    border-bottom: 0 none !important;
+
+    & .icon {
+      margin-right: 14px;
+      font-size: 16px;
+      color: @secondary-color;
+      margin-top: 4px;
+
+      [dir=rtl] & {
+        margin-right: 0;
+        margin-left: 14px;
+      }
+    }
+
+    & p {
+      margin-bottom: 0;
+    }
+  }
+}

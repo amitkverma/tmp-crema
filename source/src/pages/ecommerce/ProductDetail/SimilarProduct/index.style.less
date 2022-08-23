@@ -1,0 +1,26 @@
+@import '../../../../shared/styles/variable';
+@import '../../../../shared/styles/mixin';
+
+.similar-product-slide-view {
+  position: relative;
+  background-color: fade(@body-background, 60);
+  padding-bottom: 25px;
+
+  & .slick-prev, & .slick-next {
+    display: none !important;
+  }
+
+  & .slick-slide {
+    cursor: pointer;
+
+    & .ant-card {
+      margin: 8px;
+      border: 0 none;
+      overflow: hidden;
+    }
+
+    & .ant-card-body {
+      padding: 20px;
+    }
+  }
+}

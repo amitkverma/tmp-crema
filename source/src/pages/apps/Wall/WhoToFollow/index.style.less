@@ -1,0 +1,110 @@
+@import '../../../../shared/styles/variable';
+@import '../../../../shared/styles/mixin';
+
+.who-follow-card {
+  margin-bottom: 32px;
+
+  & .ant-card-actions {
+    background-color: transparent;
+  }
+}
+
+.who-follow-link {
+  color: @primary-color;
+}
+
+.who-follow-more-btn {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  color: @text-color;
+  border: 0 none;
+  .box-shadow(none);
+  padding: 5px;
+  border-radius: @border-radius-circle;
+  font-size: 20px;
+
+  &:hover, &:focus {
+    background-color: fade(@black, 10);
+    color: @text-color;
+  }
+}
+
+.follow-item {
+  padding: 8px 20px;
+  display: flex;
+}
+
+.follow-item-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1;
+  margin-left: 14px;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 14px;
+  }
+}
+
+.follow-item-content {
+  flex: 1;
+  margin-bottom: 6px;
+  margin-right: 10px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  & p {
+    margin-bottom: 0;
+    font-size: @font-size-base;
+    font-weight: @font-weight-medium;
+  }
+}
+
+.follow-item-content-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & h5 {
+    margin-bottom: 0;
+  }
+}
+
+.follow-avatar {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  margin-bottom: 6px;
+}
+
+.follow-item-icon {
+  font-size: 14px;
+  margin-left: 6px;
+  color: @green-base;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 6px;
+  }
+}
+
+.follow-item-btn {
+  text-transform: capitalize;
+  background-color: transparent;
+  color: @primary-color;
+  border-color: lighten(@primary-color, 48);
+  height: 30px;
+  padding: 6px 16px;
+  border-radius: @border-radius-30;
+
+  &:hover, &:focus {
+    background-color: transparent;
+    color: @primary-color;
+    border-color: lighten(@primary-color, 50);
+  }
+}

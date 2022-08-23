@@ -1,0 +1,389 @@
+@import '../../shared/styles/variable';
+
+.user-pages {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  & > div {
+    flex: 1;
+  }
+}
+
+.user-container {
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+
+  @media screen and (min-width: @screen-xxl) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.user-card {
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  & .ant-card-body {
+    padding: 24px;
+
+    @media screen and (min-width: @screen-lg) {
+      padding: 32px;
+    }
+
+    @media screen and (min-width: @screen-xxl) {
+      padding: 48px 64px;
+    }
+  }
+
+  & .ant-row > .ant-col {
+    margin-bottom: 0;
+  }
+}
+
+.user-card-lg {
+  max-width: 900px;
+}
+
+.user-card-lg-space {
+
+  & .ant-card-body {
+    padding: 32px;
+
+    @media screen and (min-width: @screen-lg) {
+      padding: 48px;
+    }
+
+    @media screen and (min-width: @screen-xxl) {
+      padding: 48px 64px;
+    }
+  }
+}
+
+.user-card-unlock {
+  & .ant-card-body {
+
+    @media screen and (min-width: @screen-sm) {
+      padding: 48px;
+    }
+
+    @media screen and (min-width: @screen-lg) {
+      padding-left: 32px;
+      padding-right: 64px;
+
+      [dir=rtl] & {
+        padding-left: 64px;
+        padding-right: 32px;
+      }
+    }
+
+    @media screen and (min-width: @screen-xxl) {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+  }
+
+  & .user-styled-img {
+    padding-right: 0;
+
+    & svg {
+      fill: @primary-color;
+    }
+
+    [dir=rtl] & {
+      padding-left: 0;
+    }
+
+  }
+}
+
+.user-styled-img {
+  height: 400px;
+  width: 100%;
+  display: inline-block;
+  object-fit: contain;
+
+  & svg {
+    fill: @primary-color;
+  }
+  @media screen and (min-width: @screen-lg) {
+    padding-right: 40px;
+
+    [dir=rtl] & {
+      padding-right: 0;
+      padding-left: 40px;
+    }
+  }
+
+  &.mln {
+    margin-left: -32px;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: -32px;
+    }
+  }
+}
+
+.user-styled-img-auto {
+  height: auto;
+}
+
+.user-card-header {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-bottom: 32px;
+  }
+
+  & h3 {
+    margin-bottom: 0;
+    font-weight: @font-weight-medium;
+    font-size: 20px;
+  }
+}
+
+.user-card-logo {
+  margin-right: 8px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+
+  & img {
+    height: 24px;
+  }
+}
+
+.user-form {
+  text-align: left;
+  margin-bottom: 12px;
+
+  [dir=rtl] & {
+    text-align: right;
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-bottom: 20px;
+  }
+
+  & .form-field {
+    margin-bottom: 20px;
+  }
+}
+
+.user-field-action {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: @screen-sm) {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 26px;
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-bottom: 32px;
+  }
+
+  & .ant-form-item-control-input {
+    min-height: 10px;
+  }
+
+  & .ant-form-item-control-input-content {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: @screen-sm) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+}
+
+.user-field-action-row {
+  & .ant-form-item-control-input-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  & .user-field-action-link {
+    padding-top: 2px;
+  }
+}
+
+.user-field-action-link {
+  color: @primary-color;
+  font-size: @font-size-base;
+  cursor: pointer;
+
+  &.ml-auto {
+    margin-top: 8px;
+
+    @media screen and (min-width: @screen-sm) {
+      margin-left: auto;
+      margin-top: 0;
+
+      [dir=rtl] & {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.user-form-btn {
+  width: 100%;
+}
+
+.user-card-footer-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-bottom: 16px;
+  }
+
+  & > span {
+    color: @grey-600;
+    font-size: @font-size-base;
+    margin-right: 16px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 16px;
+    }
+  }
+}
+
+.user-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: @screen-sm) {
+    justify-content: flex-start;
+  }
+
+  & button {
+    background-color: transparent;
+    box-shadow: none;
+    border: 0 none;
+    padding: 5px;
+    border-radius: @border-radius-circle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+
+    &:hover {
+      background-color: fade(@tooltip-bg, 4);
+    }
+
+    &:focus {
+      background-color: fade(@tooltip-bg, 15);
+    }
+
+    &:after {
+      box-shadow: none;
+    }
+
+    & .anticon {
+      font-size: @font-size-base;
+      display: block;
+
+      @media screen and (min-width: @screen-md) {
+        font-size: @font-size-lg;
+      }
+
+      & svg {
+        display: block;
+      }
+    }
+  }
+}
+
+.user-card-footer {
+  color: @grey-700;
+  font-size: @font-size-base;
+}
+
+.user-card-footer-link {
+  margin-left: 8px;
+  color: @primary-color;
+  cursor: pointer;
+  display: inline-block;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 8px;
+  }
+}
+
+.user-card-para {
+  margin-bottom: 24px;
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-bottom: 48px;
+  }
+}
+
+.user-card-for-password {
+  & .ant-card-body {
+    padding: 0;
+
+    & > .ant-row {
+      margin: 0 !important;
+    }
+
+    & > .ant-row > .ant-col {
+      padding: 0 !important;
+    }
+  }
+
+  & .user-styled-img {
+    padding-right: 0;
+    height: 100%;
+    object-fit: cover;
+
+    [dir=rtl] & {
+      padding-left: 0;
+    }
+  }
+}
+
+.user-styled-for-password {
+  padding: 32px;
+
+  @media screen and (min-width: @screen-lg) {
+    padding: 48px;
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    padding: 48px 64px;
+  }
+}
+
+.user-styled-reset-img-col {
+  text-align: center;
+
+  @media screen and (min-width: @screen-lg) {
+    align-self: center;
+  }
+}

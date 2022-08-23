@@ -1,0 +1,161 @@
+@import '../../../../shared/styles/variable';
+@import '../../../../shared/styles/mixin';
+
+.my-course-header {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.my-categories-item {
+  margin-right: 12px;
+  margin-bottom: 4px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+}
+
+.my-categories-badge {
+  cursor: pointer;
+  background-color: darken(@component-background, 7.8);
+  color: @grey-600;
+  padding: 6px 12px 7.1px;
+  border-radius: 30px;
+  display: block;
+  .transition(all .2s ease);
+
+  &.active {
+    background-color: @primary-color;
+    color: @text-color-white;
+  }
+}
+
+.course-cell {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 20px;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+
+  @media screen and (min-width: @screen-xs) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.course-cell-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+
+  @media screen and (min-width: @screen-sm) {
+    width: 55%;
+    margin-bottom: 0;
+    margin-right: 8px;
+  }
+}
+
+.course-cell-thumb {
+  margin-right: 16px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 16px;
+  }
+
+  & img {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    display: block;
+  }
+}
+
+.course-cell-info {
+  width: calc(100% - 76px);
+
+  & h3 {
+    display: inline-block;
+    font-weight: @font-weight-medium;
+    margin-bottom: 2px;
+    font-size: @font-size-base;
+  }
+
+  & p {
+    margin-bottom: 0;
+    color: @text-color-secondary;
+  }
+}
+
+.course-cell-action {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  @media screen and (min-width: @screen-sm) {
+    margin-left: auto;
+    width: 45%;
+    justify-content: flex-end;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
+  & .ant-row {
+    flex-wrap: nowrap;
+  }
+}
+
+.course-cell-rate {
+  margin-right: 8px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+}
+
+.course-cell-btn {
+  white-space: nowrap;
+  width: 105px;
+  padding: 8px 9px 7px;
+  font-size: 13px;
+  height: auto;
+  text-transform: uppercase;
+}
+
+.course-cell-rating {
+  margin-left: 8px;
+  margin-right: 8px;
+  font-size: @font-size-base;
+  @media screen and (min-width: @screen-xxl) {
+    font-size: @font-size-lg;
+  }
+}
+
+.course-cell-menu {
+  margin-left: auto;
+  margin-right: -8px;
+
+  [dir=rtl] & {
+    margin-left: -8px;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: @screen-sm) {
+    margin-left: 4px;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: 4px;
+    }
+  }
+}

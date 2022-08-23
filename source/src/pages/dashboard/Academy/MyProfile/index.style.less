@@ -1,0 +1,110 @@
+@import '../../../../shared/styles/variable';
+
+.my-profile-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-profile-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.my-profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & p {
+    margin-bottom: 8px;
+    color: @text-color-secondary;
+  }
+}
+
+.my-profile-avatar {
+  width: 50px;
+  height: 50px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  @media screen and (min-width: @screen-md) {
+    width: 70px;
+    height: 70px;
+  }
+  @media screen and (min-width: @screen-lg) {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 26px;
+  }
+  @media screen and (min-width: @screen-xxl) {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+.my-profile-title {
+  margin-bottom: 8px;
+  font-size: @font-size-lg;
+  font-weight: @font-weight-bold;
+}
+
+.my-profile-footer {
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E7F4FC;
+  color: @black;
+  border-radius: @card-radius;
+  @media screen and (min-width: @screen-xxl) {
+    padding: 20px;
+  }
+}
+
+.my-profile-footer-item {
+  padding-left: 4px;
+  padding-right: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  overflow: hidden;
+
+  &:not(:first-child) {
+    border-left: @border-style-base @border-width-base @border-color-base;
+
+    [dir=rtl] & {
+      border-left: 0 none;
+      border-right: @border-style-base @border-width-base @border-color-base;
+    }
+  }
+
+  & h4 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 20px;
+    font-weight: @font-weight-bold;
+    color: lighten(@black, 28.5);
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+
+  & .text-truncate {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.my-profile-thumb {
+  margin-bottom: 12px;
+}
+
+.my-profile-icon {
+  margin-bottom: 8px;
+}

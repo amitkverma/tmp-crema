@@ -1,0 +1,28 @@
+@import '../../../shared/styles/variable';
+
+.invoice-two-header {
+  flex-direction: column;
+
+  & .invoice-logo {
+    @media screen and (min-width: @screen-lg) {
+      justify-content: center;
+      margin-bottom: 32px;
+      margin-right: 0;
+
+      [dir=rtl] & {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.invoice-truncate-view {
+  width: 160px;
+  @media screen and (min-width: @screen-sm) {
+    width: auto;
+  }
+
+  & span {
+    display: block;
+  }
+}

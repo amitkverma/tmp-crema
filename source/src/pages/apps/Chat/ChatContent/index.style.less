@@ -1,0 +1,166 @@
+@import '../../../../shared/styles/variable';
+@import '../../../../shared/styles/mixin';
+
+.chat-content-screen {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-no-user-screen {
+  padding: 16px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+
+  @media screen and (min-width: @screen-lg) {
+    font-size: 20px;
+  }
+}
+
+.no-user-screen {
+  position: relative;
+
+  & .message-icon {
+    font-size: 3rem;
+    color: @grey-500;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: @screen-lg) {
+      font-size: 5rem;
+    }
+  }
+}
+
+.message-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.message-screen-scrollbar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 132px);
+}
+
+.scroll-chat-no-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.noMessage {
+  font-size: 18px;
+  color: @grey-500;
+}
+
+.message-apps-footer {
+  margin-top: auto;
+}
+
+.add-new-message {
+  display: flex;
+}
+
+.add-new-message-action {
+  margin-left: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 8px;
+  }
+
+  & .message-btn {
+    background-color: darken(@component-background, 5);
+    color: @text-color-disabled;
+    border: 0 none;
+    border-radius: @border-radius-circle;
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    .box-shadow(none);
+    font-size: 20px;
+
+    & .anticon-send {
+      margin-left: 3px;
+
+      [dir=rtl] & {
+        margin-left: 0;
+        margin-right: 3px;
+      }
+    }
+
+    & + .message-btn {
+      margin-left: 10px;
+
+      [dir=rtl] & {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.add-new-message-action-first {
+  margin-left: 0;
+  margin-right: 8px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+}
+
+.chat-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  & .user-info {
+    width: 100%;
+  }
+}
+
+.chat-header-action {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  & .icon-btn {
+    color: @text-color-secondary;
+    background-color: fade(@primary-color, 5);
+    margin-left: 5px;
+    margin-right: 5px;
+
+    &:hover,
+    &:focus {
+      background-color: fade(@black, 5);
+      color: @text-color;
+    }
+
+    &.active {
+      color: @primary-color;
+
+      &:hover, &:focus {
+        background-color: fade(@black, 5);
+        color: @primary-color;
+      }
+    }
+  }
+}

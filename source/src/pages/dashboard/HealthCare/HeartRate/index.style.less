@@ -1,0 +1,50 @@
+@import '../../../../shared/styles/variable';
+
+.heart-rate {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & h3 {
+    font-size: @font-size-lg;
+    font-weight: @font-weight-bold;
+    color: @text-color-white;
+  }
+}
+
+.heart-graph-view {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: -30px;
+}
+
+.heart-graph-item {
+  width: 75%;
+  @media screen and (min-width: @screen-xxl) {
+    width: 50%;
+  }
+}
+
+.unit-title {
+  background-color: fade(@black, 4);
+  margin: 0 -20px -16px;
+  padding: 12px 20px;
+  font-size: 20px;
+  font-weight: @font-weight-bold;
+  @media screen and (min-width: @screen-xxl) {
+    font-size: 24px;
+    padding: 8px 20px;
+  }
+
+  & span {
+    font-size: @font-size-lg;
+    margin-left: 8px;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: 8px;
+    }
+  }
+}
+

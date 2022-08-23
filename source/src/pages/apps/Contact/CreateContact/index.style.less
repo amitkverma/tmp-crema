@@ -1,0 +1,120 @@
+@import '../../../../shared/styles/variable';
+
+.contact-modal {
+  position: relative;
+
+  & .ant-modal-body {
+    padding: 0;
+  }
+}
+
+.contact-modal-scrollbar {
+  height: 400px;
+}
+
+.contact-form {
+  position: relative;
+
+  & .form-field {
+    width: 100%;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: @screen-xxl) {
+      margin-bottom: 24px;
+    }
+  }
+
+  & .ant-picker {
+    width: 100%;
+  }
+}
+
+.contact-form-header {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: @border-style-base @border-width-base @border-color-base;
+
+  & .dropzone {
+    margin-bottom: 0;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+.contact-form-avatar {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.contact-form-header-title {
+  font-weight: @font-weight-medium;
+}
+
+.contact-form-content {
+  position: relative;
+}
+
+.contact-form-content-item {
+  padding: 20px;
+  @media screen and (min-width: @screen-lg) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  &:not(:last-child) {
+    border-bottom: @border-width-base @border-style-base @border-color-base;
+  }
+}
+
+.contact-form-content-item-title {
+  font-size: @font-size-lg;
+  font-weight: @font-weight-medium;
+  margin-bottom: 16px;
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-bottom: 24px;
+  }
+}
+
+.contact-form-content-field {
+  position: relative;
+}
+
+.contact-form-footer {
+  padding: 16px 32px;
+  border-top: @border-width-base @border-style-base @border-color-base;
+  border-radius: 0 0 @card-radius @card-radius;
+  text-align: right;
+
+  [dir=rtl] & {
+    text-align: left;
+  }
+
+  & .ant-btn {
+    min-width: 100px;
+
+    &:not(:first-child) {
+      margin-left: 10px;
+
+      [dir=rtl] & {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.contact-form-btn {
+  padding: 8px 32px;
+}

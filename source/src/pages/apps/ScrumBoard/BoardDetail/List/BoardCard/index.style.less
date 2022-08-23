@@ -1,0 +1,124 @@
+@import '../../../../../../shared/styles/variable';
+@import '../../../../../../shared/styles/mixin';
+
+.scrum-board-card-detail {
+  margin-bottom: 8px;
+  cursor: pointer;
+
+  & .ant-card-body {
+    padding: 16px 24px;
+  }
+}
+
+.scrum-board-card-detail-title {
+  font-size: @font-size-base;
+  font-weight: @font-weight-medium;
+  margin-right: 8px;
+  white-space: normal;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+}
+
+.scrum-board-card-detail-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.scrum-board-card-detail-header-action {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  & span {
+    font-weight: @font-weight-light;
+  }
+
+  & svg {
+    font-size: 18px;
+  }
+}
+
+.scrum-board-attach-icon {
+  margin-left: 8px;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 8px;
+  }
+}
+
+.scrum-board-card-detail-user {
+  display: flex;
+  align-items: center;
+}
+
+.scrum-board-card-detail-date {
+  margin-left: 4px;
+  margin-right: auto;
+  color: @text-color-secondary;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 4px;
+  }
+}
+
+.scrum-board-card-detail-comment {
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  color: @text-color-secondary;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 8px;
+  }
+
+  & span {
+    margin-right: 8px;
+    font-weight: @font-weight-light;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 8px;
+    }
+  }
+}
+
+.scrum-board-label-flex {
+  margin: 16px -4px;
+  display: flex;
+  align-items: center;
+}
+
+.scrum-board-label {
+  width: 32px;
+  height: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 20px;
+
+  @media screen and (min-width: @screen-sm) {
+    height: 6px;
+  }
+}
+
+.scrum-board-member {
+  display: flex;
+  align-items: center;
+}
+
+.scrum-board-member-avatar {
+  width: 35px;
+  height: 35px;
+  margin-right: 8px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+}

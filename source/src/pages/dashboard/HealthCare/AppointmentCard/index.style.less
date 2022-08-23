@@ -1,0 +1,54 @@
+@import '../../../../shared/styles/variable';
+
+.appointment-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.appointment-content-item {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+  & h3 {
+    font-size: 20px;
+    font-weight: @font-weight-bold;
+    color: @text-color-white;
+  }
+
+  & p {
+    margin-bottom: 8px;
+  }
+
+  & h5 {
+    font-size: @font-size-sm;
+    margin-bottom: 12px;
+    font-weight: @font-weight-bold;
+    text-align: right;
+    color: @text-color-white;
+
+    [dir=rtl] & {
+      text-align: left;
+    }
+  }
+}
+
+.appointment-thumb {
+  margin-bottom: 8px;
+}
+
+.appointment-content-right {
+  align-items: flex-end;
+}
+
+.appointment-arrow-icon {
+  font-size: 18px;
+  margin-right: 2px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 2px;
+  }
+}
+
+

@@ -1,0 +1,27 @@
+@import '../../../../shared/styles/variable';
+
+.ant-transfer {
+  @media screen and (max-width: @screen-sm-max) {
+    flex-direction: column;
+
+    & .ant-transfer-operation {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.advance-transfer {
+  @media screen and (max-width: @screen-xs-max) {
+    flex-direction: column;
+    width: 100%;
+
+    & .ant-space-item {
+      width: 100%;
+    }
+
+    & .ant-transfer-list {
+      width: 100% !important;
+    }
+  }
+}

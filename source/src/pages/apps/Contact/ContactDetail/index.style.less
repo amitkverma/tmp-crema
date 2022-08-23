@@ -1,0 +1,141 @@
+@import '../../../../shared/styles/variable';
+
+.contact-detail-modal {
+  position: relative;
+
+  & .ant-modal-body {
+    padding: 0;
+  }
+
+  & .ant-modal-close {
+    display: none;
+  }
+
+  &:hover {
+    & .contact-action-hover {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.contact-detail-modal-header {
+  position: relative;
+  border-bottom: @border-style-base @border-width-base @border-color-base;
+  padding: 20px;
+}
+
+.contact-detail-modal-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: @screen-sm) {
+    margin-top: -12px;
+  }
+
+  & h4 {
+    font-size: @font-size-lg;
+    font-weight: @font-weight-medium;
+  }
+}
+
+.contact-detail-modal-user-avatar {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 8px;
+}
+
+.contact-detail-modal-content {
+  padding: 20px 24px;
+}
+
+.contact-detail-modal-scrollbar {
+  position: relative;
+  max-height: 400px;
+
+  & .ant-row > .ant-col {
+    margin-bottom: 0;
+  }
+}
+
+.contact-action {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: @text-color-disabled;
+}
+
+.contact-action-hover {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  visibility: hidden;
+}
+
+.contact-note {
+  padding: 20px 20px 20px 0;
+
+  [dir=rtl] & {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+
+  @media screen and (min-width: @screen-lg) {
+    padding-right: 32px;
+
+    [dir=rtl] & {
+      padding-right: 0;
+      padding-left: 32px;
+    }
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    padding-right: 40px;
+
+    [dir=rtl] & {
+      padding-right: 0;
+      padding-left: 40px;
+    }
+  }
+}
+
+.contact-detail-modal-item {
+  padding: 20px 0;
+}
+
+.contact-detail-modal-item-title {
+  font-weight: @font-weight-medium;
+  font-size: @font-size-lg;
+  margin-bottom: 8px;
+}
+
+.contact-detail-modal-item-content {
+  position: relative;
+}
+
+.contact-other-detail-item {
+  display: flex;
+  align-items: center;
+
+  &:not(:first-child) {
+    margin-top: 8px;
+  }
+}
+
+.contact-other-detail-item-content {
+  margin-left: 8px;
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 8px;
+  }
+}
+
+.contact-other-detail-item-icon {
+  font-size: @font-size-lg;
+  color: @grey-600;
+}

@@ -1,0 +1,24 @@
+@import '../../../../shared/styles/variable';
+
+.share-badge {
+  width: 50px;
+  color: @white;
+  padding: 6px 5px;
+  border-radius: @border-radius-base;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: @screen-xxl) {
+    width: 65px;
+  }
+
+  & span {
+    margin-left: 4px;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: 4px;
+    }
+  }
+}

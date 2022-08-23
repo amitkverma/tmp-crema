@@ -1,0 +1,61 @@
+@import '../../../../shared/styles/variable';
+
+.social-media-advertise {
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -8px;
+  margin-right: -8px;
+  @media screen and (min-width: @screen-xxl) {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+}
+
+.social-media-advertise-item {
+  padding-left: 8px;
+  padding-right: 8px;
+  @media screen and (min-width: @screen-xxl) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  & h4 {
+    margin-bottom: 4px;
+    font-weight: @font-weight-bold;
+    font-size: 18px;
+  }
+
+  & .dot {
+    margin-right: 12px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 12px;
+    }
+  }
+
+  & p {
+    color: @text-color-secondary;
+    font-size: @font-size-sm;
+    margin-bottom: 4px;
+  }
+}
+
+.graph-text {
+  font-size: @font-size-base;
+  font-weight: @font-weight-medium;
+}
+
+.social-media-graph {
+  margin-top: 20px;
+}
+
+.social-media-advertise-name {
+  text-transform: capitalize;
+}
+
+.social-media-advertise-value {
+  font-weight: @font-weight-medium;
+  font-size: 13px;
+}

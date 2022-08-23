@@ -1,0 +1,131 @@
+@import '../../../../../shared/styles/variable';
+@import '../../../../../shared/styles/mixin';
+
+.pricing-three-card {
+  box-shadow: none;
+  border: 0 none;
+  background-color: fade(@black, 90);
+  color: @text-color-white;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -25px;
+    z-index: 1;
+    height: 55px;
+    width: calc(100% + 30px);
+    background-color: fade(@white, 10);
+    .rotate(10deg);
+
+    [dir=rtl] & {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  & .ant-card-body {
+    padding: 0;
+  }
+}
+
+.pricing-three-content {
+  padding: 20px;
+}
+
+.pricing-three-title {
+  font-weight: @font-weight-bold;
+  font-size: @font-size-lg;
+  color: @text-color-white;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: @screen-md) {
+    margin-bottom: 30px;
+  }
+}
+
+.pricing-three-card-list {
+  position: relative;
+
+  & li {
+    padding: 0;
+    margin-bottom: 16px;
+    justify-content: flex-start;
+    border-bottom: 0 none !important;
+    color: @text-color-white;
+
+    & .icon {
+      margin-right: 14px;
+      font-size: 16px;
+      color: @secondary-color;
+      margin-top: 4px;
+
+      [dir=rtl] & {
+        margin-right: 0;
+        margin-left: 14px;
+      }
+    }
+
+    & p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.pricing-three-card-pricing-value {
+  margin-top: 30px;
+
+  & h3 {
+    font-size: @font-size-lg;
+    font-weight: @font-weight-medium;
+    color: @text-color-white;
+
+    @media screen and (min-width: @screen-md) {
+      font-size: 18px;
+    }
+
+    @media screen and (min-width: @screen-lg) {
+      font-size: 20px;
+    }
+  }
+
+  & .price {
+    font-weight: @font-weight-bold;
+    font-size: 26px;
+    line-height: 1;
+
+    @media screen and (min-width: @screen-md) {
+      font-size: 32px;
+    }
+
+    @media screen and (min-width: @screen-lg) {
+      font-size: 44px;
+    }
+
+    @media screen and (min-width: @screen-xl) {
+      font-size: 54px;
+    }
+  }
+}
+
+.pricing-three-btn-view {
+  margin-top: 10px;
+}
+
+.pricing-three-btn {
+  width: 100%;
+  font-weight: @font-weight-bold;
+  color: @text-color-white;
+  min-height: 46px;
+  border-radius: 0;
+  box-shadow: none;
+  border: 0 none;
+
+  &:hover, &:focus {
+    color: @text-color-white;
+  }
+}

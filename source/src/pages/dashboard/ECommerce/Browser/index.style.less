@@ -1,0 +1,35 @@
+@import '../../../../shared/styles/variable';
+
+.browser-cell {
+  display: flex;
+  align-items: center;
+  padding: 8px 20px;
+  border-bottom: 0 none !important;
+}
+
+.browser-thumb {
+  margin-right: 14px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 14px;
+  }
+}
+
+.browser-content {
+  flex: 1;
+  font-size: @font-size-base;
+  color: @text-color-secondary;
+
+  & h3 {
+    font-weight: @font-weight-medium;
+    margin-bottom: 2px;
+    font-size: @font-size-base;
+    color: @text-color;
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+

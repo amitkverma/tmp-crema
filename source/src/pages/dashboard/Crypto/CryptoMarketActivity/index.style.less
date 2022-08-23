@@ -1,0 +1,106 @@
+@import '../../../../shared/styles/variable';
+
+.crypto-market-activity-card {
+  position: relative;
+
+  & .ant-card-body {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.market-footer {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 8px;
+  margin-top: auto;
+  justify-content: space-between;
+
+  @media screen and (min-width: @screen-xxl) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.market-footer-action {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+
+  @media screen and (min-width: @screen-sm) {
+    width: auto;
+  }
+}
+
+.market-footer-action-item {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+
+  & .dot {
+    margin-right: 12px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 12px;
+    }
+
+    @media screen and (min-width: @screen-xxl) {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.market-footer-content {
+  margin-top: 25px;
+  font-size: @font-size-base;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  @media screen and (min-width: @screen-sm) {
+    width: auto;
+    margin-top: 0;
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-left: auto;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+}
+
+.market-footer-content-item {
+  margin-right: 12px;
+  display: flex;
+  flex-direction: column;
+  color: @text-color-secondary;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+}
+
+.market-footer-content-item-title {
+  font-weight: @font-weight-medium;
+  font-size: 18px;
+  color: @heading-color;
+  margin-bottom: 0;
+}
+
+.market-graph {
+  height: 300px !important;
+}
+

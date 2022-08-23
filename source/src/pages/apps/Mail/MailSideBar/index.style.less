@@ -1,0 +1,133 @@
+@import '../../../../shared/styles/variable';
+
+.mail-sidebar-header {
+  padding: 16px;
+
+  @media screen and (min-width: @screen-md) {
+    padding: 20px;
+  }
+
+  & .ant-btn {
+    border-radius: @border-radius-30;
+    padding: 8px 28px;
+    height: 42.5px;
+  }
+}
+
+.mail-sidebar-scrollbar {
+  height: calc(100% - 80px);
+}
+
+.mail-sidebar-content {
+  padding-bottom: 16px;
+
+  @media screen and (min-width: @screen-md) {
+    padding-bottom: 20px;
+  }
+}
+
+.mail-sidebar-list {
+  margin-bottom: 8px;
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-bottom: 20px;
+  }
+}
+
+.mail-sidebar-title {
+  font-size: @font-size-base;
+  font-weight: @font-weight-medium;
+  margin-top: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @media screen and (min-width: @screen-md) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-top: 20px;
+  }
+}
+
+.mail-connection-list-item {
+  padding: 4px 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  border: 0 none !important;
+  align-items: flex-start;
+
+  @media screen and (min-width: @screen-md) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.mail-connection-avatar {
+  width: 40px;
+  height: 40px;
+  margin-right: 14px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 14px;
+  }
+}
+
+.mail-connection-content {
+  position: relative;
+}
+
+.mail-connection-title {
+  margin-bottom: 0;
+  font-weight: @font-weight-medium;
+}
+
+.mail-label-item {
+  position: relative;
+  font-size: 15px;
+
+  & a {
+    display: flex;
+    align-items: center;
+    color: @text-color;
+    padding: 8.5px 16px;
+    margin-right: 20px;
+    border-radius: 0 @border-radius-30 @border-radius-30 0;
+
+    @media screen and (min-width: @screen-md) {
+      padding: 8.5px 20px;
+    }
+
+    &:hover, &:focus, &.active {
+      color: @primary-color;
+      background-color: fade(@primary-color, 10);
+    }
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 20px;
+      border-radius: @border-radius-30 0 0 @border-radius-30;
+    }
+  }
+
+  & .mail-dots {
+    margin-right: 16px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 16px;
+    }
+
+    @media screen and (min-width: @screen-xxl) {
+      margin-right: 20px;
+
+      [dir=rtl] & {
+        margin-right: 0;
+        margin-left: 20px;
+      }
+    }
+  }
+}

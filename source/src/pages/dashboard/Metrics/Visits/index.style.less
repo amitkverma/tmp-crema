@@ -1,0 +1,49 @@
+@import '../../../../shared/styles/variable';
+
+.visits-card {
+  position: relative;
+
+  & .ant-card-actions {
+    padding: 16px 20px;
+    border-top: 0 none;
+
+    & li {
+      margin: 0;
+    }
+
+    & > li > span:hover {
+      color: @text-color;
+      cursor: inherit;
+    }
+  }
+}
+
+.visits-footer {
+  width: 100%;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: @font-weight-medium;
+  color: @text-color;
+
+  & p {
+    margin-bottom: 0;
+
+    & span {
+      margin-left: 8px;
+      color: @primary-color;
+
+      [dir=rtl] & {
+        margin-left: 0;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+.visits-graph-payload {
+  padding: 2px 16px;
+  color: @white;
+}

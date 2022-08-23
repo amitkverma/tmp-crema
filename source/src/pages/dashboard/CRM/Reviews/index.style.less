@@ -1,0 +1,35 @@
+@import '../../../../shared/styles/variable';
+
+.reviews-card {
+  background-color: @cyan-7;
+  color: @text-color-white;
+  overflow: hidden;
+}
+
+.reviews-content {
+  display: flex;
+  flex-direction: column;
+
+  & h3 {
+    margin-bottom: 4px;
+    font-weight: @font-weight-bold;
+    font-size: @font-size-lg;
+    color: @text-color-white;
+  }
+
+  & h4 {
+    margin-bottom: 8px;
+    font-weight: @font-weight-medium;
+    font-size: 18px;
+    color: @green-3;
+
+    @media screen and (min-width: @screen-xxl) {
+      font-size: 20px;
+    }
+  }
+}
+
+.reviews-graph {
+  margin-bottom: -64px;
+}
+

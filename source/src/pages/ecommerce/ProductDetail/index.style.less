@@ -1,0 +1,86 @@
+@import '../../../shared/styles/variable';
+@import '../../../shared/styles/mixin';
+
+.product-detail {
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.product-detail-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: @border-style-base @border-width-base @border-color-base;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: @screen-xs) {
+    flex-direction: column;
+  }
+}
+
+.product-detail-header-info {
+  position: relative;
+  flex: 1;
+
+  & h3 {
+    color: @text-color;
+    font-weight: @font-weight-bold;
+    font-size: @font-size-lg;
+    margin-bottom: 4px;
+  }
+}
+
+.product-detail-header-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  & .ant-rate {
+    font-size: @font-size-base;
+    margin-bottom: 6px;
+  }
+
+  & > span {
+    margin-bottom: 6px;
+  }
+}
+
+.product-review-text {
+  margin-left: 8px;
+  margin-right: 16px;
+  color: @text-color-secondary;
+
+  [dir=rtl] & {
+    margin-left: 16px;
+    margin-right: 8px;
+  }
+}
+
+.product-mb-text {
+  margin-left: 8px;
+  color: @text-color-secondary;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 8px;
+  }
+}
+
+.product-detail-social {
+  display: flex;
+
+  @media screen and (max-width: @screen-xs) {
+    margin-top: 10px;
+  }
+
+  & .react-share__ShareButton {
+    margin-right: 0 !important;
+    margin-left: 12px !important;
+
+    [dir=rtl] & {
+      margin-right: 12px !important;
+      margin-left: 0 !important;
+    }
+  }
+}

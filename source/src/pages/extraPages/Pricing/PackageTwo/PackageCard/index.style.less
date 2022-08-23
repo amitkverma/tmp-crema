@@ -1,0 +1,115 @@
+@import '../../../../../shared/styles/variable';
+
+.pricing-two-card {
+  box-shadow: none;
+  border: @border-style-base @border-width-base @border-color-base;
+
+  & .ant-card-body {
+    padding: 0;
+  }
+}
+
+.pricing-two-card-header {
+  padding: 20px;
+  text-align: center;
+  border-bottom: @border-style-base @border-width-base @border-color-base;
+
+  & :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.pricing-two-card-header-title {
+  font-weight: @font-weight-bold;
+  font-size: @font-size-lg;
+  margin-bottom: 16px;
+}
+
+.pricing-two-card-value {
+  padding: 20px;
+  text-align: center;
+  border-bottom: @border-style-base @border-width-base @border-color-base;
+}
+
+.pricing-two-card-pricing-value {
+  margin-bottom: 16px;
+
+  & h3 {
+    font-size: @font-size-lg;
+    font-weight: @font-weight-medium;
+    color: @text-color-secondary;
+
+    @media screen and (min-width: @screen-md) {
+      font-size: 18px;
+    }
+
+    @media screen and (min-width: @screen-lg) {
+      font-size: 20px;
+    }
+  }
+
+  & .dollar {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  & .price {
+    font-weight: @font-weight-bold;
+    font-size: 26px;
+    line-height: 1;
+
+    @media screen and (min-width: @screen-md) {
+      font-size: 32px;
+    }
+
+    @media screen and (min-width: @screen-lg) {
+      font-size: 44px;
+    }
+
+    @media screen and (min-width: @screen-xl) {
+      font-size: 54px;
+    }
+  }
+}
+
+.pricing-two-card-content {
+  padding: 20px;
+}
+
+.pricing-two-card-list {
+  position: relative;
+
+  & li {
+    padding: 0;
+    margin-bottom: 16px;
+    justify-content: flex-start;
+    border-bottom: 0 none !important;
+
+    & .icon {
+      margin-right: 14px;
+      font-size: 16px;
+      color: @secondary-color;
+      margin-top: 4px;
+
+      [dir=rtl] & {
+        margin-right: 0;
+        margin-left: 14px;
+      }
+    }
+
+    & p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.pricing-two-card-btn-view {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.pricing-two-card-btn {
+  font-weight: @font-weight-bold;
+  min-width: 150px;
+  border-radius: 30px;
+}

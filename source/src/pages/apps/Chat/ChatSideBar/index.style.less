@@ -1,0 +1,145 @@
+@import '../../../../shared/styles/variable';
+
+.chat-sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-sidebar-user-view {
+  padding: 16px 24px 10px;
+
+  @media screen and (min-width: @screen-xxl) {
+    padding-bottom: 20px;
+  }
+}
+
+.chat-sidebar-search-view {
+  padding: 0 24px 8px;
+  width: 100%;
+}
+
+.chat-sidebar-search {
+  position: relative;
+
+  & .ant-input {
+    padding: 8px 14px;
+    height: 36px;
+  }
+
+  & .ant-input-search-button {
+    height: 36px;
+    width: 36px;
+    box-shadow: none;
+
+    & .anticon svg {
+      display: block;
+    }
+  }
+
+  & .ant-input-group > .ant-input:last-child,
+  & .ant-input-group-addon:last-child,
+  &.ant-input-search > .ant-input-group > .ant-input-group-addon:last-child .ant-input-search-button {
+
+    [dir=rtl] & {
+      border-radius: @border-radius-base 0 0 @border-radius-base;
+    }
+  }
+}
+
+.chat-list-item {
+  display: flex;
+  padding: 8px 20px;
+  cursor: pointer;
+
+  &.active {
+    background-color: fade(@primary-color, 7);
+  }
+}
+
+.chat-avatar-view {
+  position: relative;
+}
+
+.chat-avatar {
+  width: 40px;
+  height: 40px;
+
+  @media screen and (min-width: @screen-xxl) {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.chat-list-item-content {
+  font-size: @font-size-base;
+  padding-left: 14px;
+  width: calc(100% - 40px);
+  color: @text-color-secondary;
+  overflow: hidden;
+
+  [dir=rtl] & {
+    padding-left: 0;
+    padding-right: 16px;
+  }
+
+  & h3 {
+    font-weight: @font-weight-medium;
+    margin-bottom: 2px;
+    font-size: @font-size-base;
+  }
+}
+
+.chat-sidebar-tabs {
+  height: 100%;
+
+  & .ant-tabs-content {
+    height: 100%;
+  }
+
+  & .ant-tabs-nav-list {
+    width: 100%;
+  }
+
+  & .ant-tabs-tab {
+    width: 50%;
+    justify-content: center;
+    padding: 6px 12px;
+    min-height: 48px;
+    font-size: @font-size-lg;
+  }
+
+  & .ant-tabs-tab + .ant-tabs-tab {
+    margin-left: 0;
+
+    [dir=rtl] & {
+      margin-right: 0;
+    }
+  }
+
+  &.ant-tabs > .ant-tabs-nav {
+    margin-bottom: 8px;
+  }
+}
+
+.chat-tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & svg {
+    font-size: 16px;
+  }
+}
+
+.chat-sidebar-scrollbar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-sidebar-title {
+  padding: 8px 20px 4px;
+  font-weight: @font-weight-bold;
+  font-size: @font-size-lg;
+}

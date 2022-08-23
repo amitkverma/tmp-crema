@@ -1,0 +1,75 @@
+@import '../../../../shared/styles/variable';
+
+.traffic-collapse {
+  position: relative;
+  background-color: transparent;
+
+  &.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+    padding: 12px 8px;
+  }
+
+  &.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+    display: none;
+  }
+
+  &.ant-collapse-borderless > .ant-collapse-item > .ant-collapse-content {
+    border-top: @border-style-base @border-width-base darken(@border-color-base, 2);
+  }
+}
+
+.traffic-collapse-header-panel {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  & .ant-progress {
+    line-height: 1;
+  }
+}
+
+.traffic-collapse-header {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & h3 {
+    margin-bottom: 0;
+    font-size: @font-size-base;
+  }
+
+  & span {
+    color: @text-color-secondary;
+  }
+}
+
+.traffic-collapse-panel {
+  position: relative;
+  border-bottom: 0 none !important;
+
+  &.ant-collapse-item-active {
+    background-color: darken(@component-background, 3);
+  }
+
+  & .ant-collapse-content > .ant-collapse-content-box {
+    padding: 8px;
+  }
+}
+
+.traffic-collapse-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  color: @text-color-secondary;
+}
+
+.traffic-collapse-data {
+  font-weight: @font-weight-light;
+  margin-right: 8px;
+  color: @text-color;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+}

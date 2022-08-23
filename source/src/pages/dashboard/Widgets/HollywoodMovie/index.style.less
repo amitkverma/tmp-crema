@@ -1,0 +1,82 @@
+@import '../../../../shared/styles/variable';
+
+.hollywood-card {
+  background-image: url("../../../../assets/images/movie.png");
+  color: @text-color-white;
+  position: relative;
+  min-height: 320px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: fade(@tooltip-bg, 35);
+    border-radius: inherit;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 3;
+  }
+
+  & .ant-card-body {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.hollywood-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.hollywood-content-action {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hollywood-avatar {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  @media screen and (min-width: @screen-sm) {
+    width: 70px;
+    height: 70px;
+  }
+  @media screen and (min-width: @screen-md) {
+    width: 90px;
+    height: 90px;
+  }
+  @media screen and (min-width: @screen-xxl) {
+    width: 110px;
+    height: 110px;
+  }
+
+  & img {
+    width: 100%;
+  }
+}
+
+.hollywood-footer {
+  margin-top: 12px;
+
+  & h1 {
+    font-weight: @font-weight-medium;
+    color: @text-color-white;
+    font-size: 20px;
+    @media screen and (min-width: @screen-sm) {
+      font-size: 24px;
+    }
+    @media screen and (min-width: @screen-xxl) {
+      font-size: 30px;
+    }
+  }
+}

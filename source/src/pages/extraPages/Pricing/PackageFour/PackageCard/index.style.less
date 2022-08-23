@@ -1,0 +1,102 @@
+@import '../../../../../shared/styles/variable';
+@import '../../../../../shared/styles/mixin';
+
+.pricing-four-card {
+  box-shadow: none;
+  border: @border-width-base @border-style-base @border-color-base;
+  overflow: hidden;
+
+  & .ant-card-body {
+    padding: 0;
+  }
+}
+
+.pricing-four-content {
+  padding: 20px;
+}
+
+.pricing-four-card-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.pricing-four-card-pricing-circle {
+  width: 149px;
+  height: 149px;
+  padding: 10px;
+  border-radius: @border-radius-circle;
+  color: @text-color-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  & h3 {
+    font-size: @font-size-lg;
+    font-weight: @font-weight-medium;
+    margin-bottom: 0;
+    color: @text-color-white;
+  }
+
+  & .price {
+    font-weight: @font-weight-bold;
+    font-size: 26px;
+    line-height: 1;
+  }
+
+  & h5 {
+    font-weight: @font-weight-bold;
+    font-size: @font-size-lg;
+    text-transform: uppercase;
+    color: @text-color-white;
+    margin-bottom: 0;
+  }
+}
+
+
+.pricing-four-card-list {
+  position: relative;
+  border-top: @border-width-base @border-style-base @border-color-base;
+
+  & li {
+    padding: 14px 0;
+    justify-content: flex-start;
+    color: @text-color;
+    border-bottom: @border-width-base @border-style-base @border-color-base !important;
+
+    & .icon {
+      margin-right: 14px;
+      font-size: 16px;
+      color: @secondary-color;
+      margin-top: 4px;
+
+      [dir=rtl] & {
+        margin-right: 0;
+        margin-left: 14px;
+      }
+    }
+
+    & p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.pricing-four-btn-view {
+  margin-top: 10px;
+}
+
+.pricing-four-btn {
+  width: 100%;
+  font-weight: @font-weight-bold;
+  color: @text-color-white;
+  min-height: 46px;
+  border-radius: 0;
+  box-shadow: none;
+  border: 0 none;
+
+  &:hover, &:focus {
+    color: @text-color-white;
+  }
+}

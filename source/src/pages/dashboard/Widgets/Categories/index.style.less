@@ -1,0 +1,39 @@
+@import '../../../../shared/styles/variable';
+
+.categories-scrollbar {
+  height: 212px;
+
+  @media screen and (min-width: @screen-xxl) {
+    height: 322px;
+  }
+}
+
+.categories-list-half {
+  & .ant-list-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 0;
+  }
+}
+
+.category-item {
+  position: relative;
+  width: 50%;
+  padding: 8px 20px;
+  border-bottom: 0 none !important;
+  justify-content: flex-start;
+
+  & .ant-checkbox-wrapper {
+    margin-right: 12px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 12px;
+    }
+  }
+
+  & .ant-checkbox {
+    top: 0;
+  }
+}

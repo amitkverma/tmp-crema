@@ -1,0 +1,130 @@
+@import '../../../../shared/styles/variable';
+@import '../../../../shared/styles/mixin';
+
+.product-sidebar {
+  padding: 24px;
+  position: relative;
+}
+
+.product-sidebar-title {
+  font-size: @font-size-base;
+  margin-bottom: 8px;
+  font-weight: @font-weight-medium;
+}
+
+.product-sidebar-item {
+  position: relative;
+
+  &:not(:last-child) {
+    border-bottom: @border-style-base @border-width-base @border-color-base;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+.product-sidebar-item-title {
+  font-size: @font-size-base;
+  color: @text-color-secondary;
+  margin-bottom: 16px;
+  font-weight: @font-weight-medium;
+  text-transform: uppercase;
+}
+
+.product-sidebar-checked-cell {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  & .ant-checkbox-wrapper {
+    display: flex;
+    margin-right: 16px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 16px;
+    }
+  }
+
+  & .ant-checkbox {
+    display: block;
+    top: 0;
+  }
+}
+
+.product-sidebar-color-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: @border-radius-circle;
+  cursor: pointer;
+}
+
+.product-sidebar-color-cell-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: @border-radius-circle;
+  color: @white;
+  border: 0 none;
+  .box-shadow(none);
+  font-size: 20px;
+  background-color: transparent;
+  padding: 5px;
+
+  &:hover, &:focus {
+    background-color: transparent;
+  }
+
+  & .anticon svg {
+    display: block;
+  }
+}
+
+.product-sidebar-price-selector {
+  display: flex;
+  justify-content: space-between;
+
+  & span {
+    font-weight: @font-weight-medium;
+  }
+}
+
+.product-sidebar-tree {
+  flex-grow: 1;
+  max-width: 400px;
+  font-weight: @font-weight-regular;
+}
+
+.product-sidebar-rating-cell {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: @text-color-secondary;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  & .ant-checkbox-wrapper {
+    display: flex;
+    margin-right: 16px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 16px;
+    }
+  }
+
+  & .ant-checkbox {
+    display: block;
+    top: 0;
+  }
+}

@@ -1,0 +1,54 @@
+@import '../../../../shared/styles/variable';
+
+.birthday-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  & .ant-card-body {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.birthday-header {
+  padding: 20px;
+  color: @text-color-white;
+  background-color: @blue-7;
+  text-align: center;
+
+  @media screen and (min-width: @screen-xxl) {
+    padding: 28px;
+  }
+
+  & h3 {
+    font-size: @font-size-lg;
+    font-weight: @font-weight-bold;
+    color: @text-color-white;
+    margin-bottom: 0;
+  }
+}
+
+.birthday-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  @media screen and (min-width: @screen-sm) {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.birthday-thumb {
+  margin-bottom: 16px;
+}

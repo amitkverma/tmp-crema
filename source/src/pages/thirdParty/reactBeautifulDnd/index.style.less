@@ -1,0 +1,120 @@
+@import '../../../shared/styles/variable';
+@import '../../../shared/styles/mixin';
+
+.beautiful-dnd {
+  margin-right: 12px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+}
+
+.beautiful-dnd-list-item {
+  background-color: @component-background;
+  padding: 8px;
+  width: 16rem;
+  margin-right: 8px;
+  display: flex;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+}
+
+.beautiful-dnd-avatar {
+  margin-right: 12px;
+  margin-top: 0;
+  margin-left: 6px;
+  display: flex;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+
+  [dir=rtl] & {
+    margin-right: 6px;
+    margin-left: 12px;
+  }
+}
+
+.beautiful-dnd-content {
+  position: relative;
+  color: @text-color-secondary;
+
+  & h3 {
+    font-size: @font-size-base;
+    font-weight: @font-weight-medium;
+    margin-bottom: 0;
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.multiple-drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: @screen-md) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.multiple-drop-item {
+  position: relative;
+}
+
+.multiple-drop-list-item {
+  padding: 8px;
+  background-color: @component-background !important;
+  display: flex;
+  margin-bottom: 0 !important;
+
+  &:not(:last-child) {
+    margin-bottom: 20px !important;
+  }
+}
+
+.simple-dnd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.simple-dnd-list-item {
+  padding: 8px;
+  background-color: @component-background;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.hook-dnd-list-item {
+  padding: 8px;
+  background-color: @component-background;
+  display: flex;
+}
+
+.with-hook {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.with-hook-root {
+  padding: 8px;
+  margin-bottom: 12px;
+  border: @border-style-base 4px @border-color-base;
+
+  @media screen and (max-width: @screen-sm-max) {
+    width: 100%;
+
+    & .css-1gwkzgr {
+      width: 100%;
+    }
+  }
+}

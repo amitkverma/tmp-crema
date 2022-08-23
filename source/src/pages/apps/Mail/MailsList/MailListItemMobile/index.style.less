@@ -1,0 +1,112 @@
+@import '../../../../../shared/styles/variable';
+
+.mail-list-item-mobile {
+  font-weight: @font-weight-regular;
+  display: flex;
+  flex-direction: row;
+  border-bottom: @border-width-base @border-style-base @border-color-base;
+  padding: 8px 24px;
+  cursor: pointer;
+  justify-content: flex-start;
+
+  &.mailRead {
+    background-color: fade(@black, 3);
+  }
+}
+
+.mail-list-avatar-mobile-view {
+  margin-right: 14px;
+  margin-top: 3px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 14px;
+  }
+
+  &.checked {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 18px;
+    background-color: @primary-color;
+    color: @white;
+    border-radius: @border-radius-circle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.mail-list-avatar-mobile {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 18px;
+  display: block;
+}
+
+.mail-list-content-mobile {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 50px);
+
+
+  & .mail-list-time {
+    font-size: @font-size-sm;
+    width: auto;
+  }
+}
+
+.mail-list-main-content-mobile {
+  position: relative;
+  width: calc(100% - 60px);
+  padding-right: 10px;
+
+  [dir=rtl] & {
+    padding-right: 0;
+    padding-left: 10px;
+  }
+}
+
+.mail-list-action-mobile {
+  min-width: 60px;
+  padding-top: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  transition: all 0.4s ease 0s;
+}
+
+.mail-list-time-mobile {
+  position: relative;
+  font-size: @font-size-sm;
+  font-weight: @font-weight-medium;
+  color: @text-color-secondary;
+}
+
+.mail-list-starred-mobile {
+  margin-top: 3px;
+  position: relative;
+}
+
+.mail-list-title-mobile {
+  margin-bottom: 0;
+  font-weight: @font-weight-medium;
+  color: @heading-color;
+
+  @media screen and (min-width: @screen-sm) {
+    width: 120px;
+  }
+}
+
+.mail-list-sub-title-mobile {
+  font-weight: @font-weight-regular;
+  color: @text-color;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.mail-description-mobile {
+  color: @text-color-secondary;
+  margin-bottom: 0;
+}

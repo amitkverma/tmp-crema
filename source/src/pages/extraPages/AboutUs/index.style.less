@@ -1,0 +1,196 @@
+@import '../../../shared/styles/variable';
+
+.about-intro-card {
+  overflow: hidden;
+  & .ant-card-body {
+    padding: 0;
+  }
+}
+
+.about-img-view {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: @screen-md) {
+    flex-direction: row;
+  }
+}
+
+.about-img {
+  width: 100%;
+
+  @media screen and (min-width: @screen-md) {
+    width: 40%;
+    order: 2;
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    max-height: 300px;
+  }
+
+  & > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.about-img-content {
+  width: 100%;
+  padding: 20px;
+
+  @media screen and (min-width: @screen-md) {
+    width: 60%;
+    order: 1;
+  }
+
+  & h2 {
+    margin-bottom: 16px;
+    font-weight: @font-weight-bold;
+    font-size: @font-size-lg;
+  }
+
+  & p {
+    margin-bottom: 20px;
+  }
+}
+
+.about-btn-view {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: -8px;
+  margin-right: -8px;
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+
+  & .btn {
+    font-size: @font-size-base;
+    margin-bottom: 8px;
+    font-weight: @font-weight-light;
+    margin-left: 8px;
+    margin-right: 8px;
+    text-transform: uppercase;
+
+    @media screen and (min-width: @screen-xxl) {
+      margin-right: 12px;
+      margin-left: 12px;
+    }
+  }
+}
+
+.about-read-btn {
+  font-weight: @font-weight-medium;
+  background-color: @white;
+  color: @black;
+}
+
+.about-section-card {
+  & .ant-card-body {
+    padding: 20px;
+    text-align: center;
+  }
+
+  & h2 {
+    margin-bottom: 16px;
+    font-weight: @font-weight-bold;
+    font-size: @font-size-lg;
+  }
+
+  & p {
+    margin-bottom: 20px;
+  }
+
+  & .read-btn {
+    font-size: @font-size-base;
+    font-weight: @font-weight-medium;
+    text-transform: uppercase;
+  }
+}
+
+.about-section-thumb {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-section-avatar {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  font-size: 24px;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: @screen-xxl) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.team-card {
+  & .ant-card-body {
+    padding: 20px;
+  }
+
+  & h2 {
+    margin-bottom: 16px;
+    font-weight: @font-weight-bold;
+    font-size: @font-size-lg;
+  }
+}
+
+.team-slider-view {
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-bottom: 25px;
+
+  & .slick-dots li {
+    width: 12px;
+    height: 12px;
+    margin-right: 2px;
+    margin-left: 2px;
+
+    & button {
+      width: 12px;
+      height: 12px;
+
+      &:before {
+        width: 12px;
+        height: 12px;
+        font-size: 10px;
+        color: #be8658;
+      }
+    }
+  }
+
+  & .slick-dots li.slick-active button:before {
+    color: #825a44;
+  }
+}
+
+.team-slider-info {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+
+  & h5 {
+    margin-bottom: 4px;
+    font-weight: @font-weight-medium;
+    font-size: @font-size-base;
+  }
+}
+
+.team-slider-thumb {
+  width: 100%;
+  margin-bottom: 12px;
+
+  & img {
+    border-radius: @card-radius;
+    width: 100%;
+  }
+}

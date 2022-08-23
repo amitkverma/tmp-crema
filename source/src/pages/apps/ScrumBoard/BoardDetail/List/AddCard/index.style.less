@@ -1,0 +1,500 @@
+@import '../../../../../../shared/styles/variable';
+@import '../../../../../../shared/styles/mixin';
+
+.scrum-board-add-card-form-scroll {
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-card-drawer {
+
+  & .ant-drawer-content-wrapper {
+    width: 320px !important;
+
+    @media screen and (min-width: @screen-sm) {
+      width: 400px !important;
+    }
+
+    @media screen and (min-width: @screen-md) {
+      width: 500px !important;
+    }
+
+    @media screen and (min-width: @screen-lg) {
+      width: 700px !important;
+    }
+
+    @media screen and (min-width: @screen-xl) {
+      width: 900px !important;
+    }
+  }
+
+  & .ant-drawer-body {
+    padding: 0;
+  }
+
+  & .ant-drawer-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.scrum-board-add-card-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  & .ant-form-item {
+    margin-bottom: 20px;
+  }
+}
+
+.scrum-board-add-card-form-board-list-title {
+  margin-bottom: 12px;
+  font-weight: @font-weight-medium;
+  font-size: @font-size-lg;
+
+  @media screen and (min-width: @screen-sm) {
+    margin-right: 8px;
+    margin-bottom: 0;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 8px;
+    }
+  }
+}
+
+.scrum-board-date-picker {
+  position: relative;
+  width: 100%;
+}
+
+.scrum-board-add-card-form-board-list-right {
+
+  @media screen and (min-width: @screen-sm) {
+    margin-left: auto;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+}
+
+.scrum-board-add-card-form-content {
+  padding: 20px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrum-board-add-card-form-footer {
+  padding: 16px 32px;
+  border-top: @border-width-base @border-style-base @border-color-base;
+  border-radius: 0 0 @border-radius-base @border-radius-base;
+  text-align: right;
+
+  [dir=rtl] & {
+    text-align: left;
+  }
+
+  & .ant-btn {
+    width: 100px;
+
+    &:not(:first-child) {
+      margin-left: 10px;
+
+      [dir=rtl] & {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.scrum-board-attachment-title {
+  margin-bottom: 12px;
+
+  @media screen and (min-width: @screen-sm) {
+    margin-bottom: 20px;
+  }
+}
+
+.scrum-board-attachment {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.scrum-board-attachment-items {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 12px;
+  width: 50%;
+
+  @media screen and (min-width: @screen-sm) {
+    width: 33.33%;
+  }
+
+  @media screen and (min-width: @screen-md) {
+    width: 25%;
+  }
+
+  @media screen and (min-width: @screen-lg) {
+    width: 20%;
+  }
+}
+
+.scrum-board-attachment-card {
+  border-radius: @border-radius-base;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.5s ease;
+  width: 100%;
+
+  &:hover {
+    background-color: fade(@text-color, 10);
+
+    & .scrum-board-attachment-items-action {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.scrum-board-attachment-img {
+  width: 100%;
+  position: relative;
+
+  & img {
+    width: 100%;
+    height: 132px;
+    object-fit: cover;
+  }
+}
+
+.scrum-board-attachment-items-action {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 10px;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: fade(@text-color, 60);
+  transition: all 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+
+  & .icon-btn {
+    background-color: fade(@card-background, 50);
+    color: @heading-color;
+    font-weight: @font-weight-bold;
+
+    &:hover {
+      background-color: fade(@card-background, 60);
+      color: @heading-color;
+    }
+
+    &:not(:first-child) {
+      margin-left: 10px;
+
+      [dir=rtl] & {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.scrum-board-attachment-content {
+  padding: 8px 12px;
+}
+
+.scrum-board-attachment-file-name {
+  font-weight: @font-weight-light;
+  color: @primary-color;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.scrum-board-attachment-file-time {
+  position: relative;
+  font-size: @font-size-sm;
+
+  & span {
+    margin-right: 4px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 4px;
+    }
+  }
+}
+
+.scrum-board-card-check-list {
+  margin-bottom: 32px;
+}
+
+.scrum-board-card-check-list-header {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+
+  & h4 {
+    font-size: @font-size-lg;
+    margin-bottom: 0;
+  }
+
+  & .ant-btn {
+    margin-left: auto;
+    padding: 6px 16px;
+    font-weight: @font-weight-light;
+    text-transform: capitalize;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+}
+
+.scrum-board-card-check-list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+
+  & .icon-btn {
+    margin-left: 12px;
+    margin-right: -12px;
+    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+
+    [dir=rtl] & {
+      margin-left: -12px;
+      margin-right: 12px;
+    }
+  }
+
+  &:hover {
+    & .icon-btn {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.scrum-board-card-check-list-item-check-box {
+  margin-right: 8px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+}
+
+.scrum-board-card-check-list-item-input {
+  width: 100%;
+}
+
+.scrum-board-card-comment {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.scrum-board-card-comment-item {
+  display: flex;
+
+  &:not(:first-child) {
+    margin-top: 16px;
+  }
+}
+
+.scrum-board-card-comment-item-previous {
+
+  &:not(:first-child) {
+    margin-top: 1px;
+  }
+
+  & .scrum-board-card-comment-item-user-date,
+  & .scrum-board-card-comment-item-user-avatar {
+    display: none;
+  }
+
+  & .scrum-board-card-comment-item-user-content {
+    margin-left: 54px;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: 54px;
+    }
+  }
+}
+
+.scrum-board-card-comment-area {
+  display: inline-block;
+  .box-shadow(none);
+  border-radius: 0 10px 10px 0;
+  padding: 6px 12px;
+  position: relative;
+  background-color: @component-background;
+  border: @border-style-base @border-width-base @divider-color;
+  font-size: @font-size-base;
+
+  [dir=rtl] & {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .last-scrum-board-message & {
+    border-radius: 0 10px 10px 10px;
+
+    [dir=rtl] & {
+      border-radius: 10px 0 10px 10px;
+    }
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.scrum-board-card-comment-view {
+  margin: 0 -24px;
+  border-top: @border-width-base @border-style-base @border-color-base;
+  padding: 20px 24px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrum-board-card-comment-scroll {
+  max-height: 200px;
+}
+
+.scrum-board-card-comment-item-user-avatar {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  background-color: @orange-5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: @font-size-lg;
+}
+
+.scrum-board-card-comment-item-user-content {
+  margin-left: 14px;
+  flex: 1;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 14px;
+  }
+}
+
+.scrum-board-card-comment-title {
+  margin-bottom: 16px;
+  font-size: @font-size-lg;
+}
+
+.scrum-board-card-comment-item-user-name {
+  color: @primary-color;
+  font-weight: @font-weight-light;
+  display: flex;
+}
+
+.scrum-board-card-comment-item-user-date {
+  color: @text-color-disabled;
+  font-size: @font-size-sm;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.scrum-board-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+
+  [dir=rtl] & {
+    padding-right: 0;
+    padding-left: 20px;
+  }
+
+  & h3 {
+    font-size: @font-size-lg;
+    font-weight: @font-weight-bold;
+    margin-bottom: 0;
+  }
+}
+
+.scrum-board-card-header-action {
+  display: flex;
+  align-items: center;
+}
+
+.scrum-board-card-comment-footer {
+  position: relative;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+
+  & textarea.ant-input {
+    padding: 10px 14px;
+  }
+
+  & .ant-btn {
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12px;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: 12px;
+    }
+  }
+}
+
+.add-card-modal {
+  position: relative;
+
+  & .ant-modal-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  & .ant-modal-body {
+    padding: 0;
+  }
+}
+
+.multiple-select {
+  display: flex;
+  align-items: center;
+
+  .ant-select-multiple & {
+    & .ant-avatar {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.multiple-select-name {
+  margin-left: 10px;
+
+  .ant-select-multiple & {
+    font-size: 11px;
+  }
+}

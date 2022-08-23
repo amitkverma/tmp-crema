@@ -1,0 +1,82 @@
+@import '../../../../shared/styles/variable';
+@import '../../../../shared/styles/mixin';
+
+.request-card {
+  margin-bottom: 32px;
+
+  & .ant-card-actions {
+    background-color: transparent;
+  }
+}
+
+.request-item {
+  padding: 8px 20px;
+  display: flex;
+}
+
+.request-item-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex: 1;
+  margin-left: 14px;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 14px;
+  }
+}
+
+.request-avatar {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+}
+
+.request-item-content {
+  flex: 1;
+
+  & h4 {
+    margin-bottom: 2px;
+    font-size: @font-size-base;
+    white-space: nowrap;
+  }
+
+  & p {
+    margin-bottom: 0;
+    color: @text-color-secondary;
+  }
+}
+
+.request-item-action {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.request-item-btn {
+  margin: 0 4px 4px;
+  .box-shadow(none);
+  border-radius: @border-radius-circle;
+  border: 0 none;
+  color: @text-color;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  font-size: 20px;
+
+  &:hover, &:focus {
+    background-color: fade(@black, 10);
+    color: @text-color;
+  }
+}
+
+.request-item-btn-primary {
+  color: @primary-color;
+
+  &:hover, &:focus {
+    background-color: fade(@primary-color, 10);
+    color: @primary-color;
+  }
+}

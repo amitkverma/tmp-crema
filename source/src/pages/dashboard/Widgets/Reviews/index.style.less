@@ -1,0 +1,45 @@
+@import '../../../../shared/styles/variable';
+
+.review-scrollbar {
+  height: 345px;
+  @media screen and (min-width: @screen-xxl) {
+    height: 300px;
+  }
+}
+
+.review-item {
+  border-bottom: 0 none !important;
+  font-size: @font-size-base;
+  padding: 8px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  & p {
+    color: @text-color-secondary;
+    margin-bottom: 4px;
+  }
+}
+
+.review-item-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.review-item-by {
+  font-weight: @font-weight-medium;
+  color: @primary-color;
+}
+
+.review-time {
+  margin-left: auto;
+  color: @text-color-secondary;
+  font-weight: @font-weight-medium;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}

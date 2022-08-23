@@ -1,0 +1,69 @@
+@import '../../../../shared/styles/variable';
+
+.btc-card {
+  overflow: hidden;
+  position: relative;
+}
+
+.btc-footer {
+  padding-top: 20px;
+  margin-bottom: -10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  @media screen and (min-width: @screen-xxl) {
+    padding-left: 20px;
+
+    [dir=rtl] & {
+      padding-left: 0;
+      padding-right: 20px;
+    }
+  }
+}
+
+.btc-item {
+  padding-left: 12px;
+  padding-right: 12px;
+  flex: 1;
+  color: @text-color-secondary;
+
+  & .dot {
+    margin-right: 8px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 8px;
+    }
+
+    @media screen and (min-width: @screen-xxl) {
+      height: 16px;
+      width: 16px;
+    }
+  }
+}
+
+.btc-item-title {
+  font-size: 18px;
+  font-weight: @font-weight-bold;
+  margin-bottom: 0;
+}
+
+.btc-graph {
+  width: 220px !important;
+  height: 220px !important;
+  align-self: center;
+  @media screen and (min-width: @screen-xxl) {
+    width: 320px !important;
+    height: 320px !important;
+  }
+
+  & .recharts-surface {
+    width: 220px !important;
+    height: 220px !important;
+    @media screen and (min-width: @screen-xxl) {
+      width: 320px !important;
+      height: 320px !important;
+    }
+  }
+}
+

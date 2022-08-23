@@ -1,0 +1,57 @@
+@import '../../../../shared/styles/variable';
+
+.floating-graph-card {
+  text-align: center;
+  overflow: hidden;
+
+  & p {
+    margin-bottom: 12px;
+    color: @text-color-secondary;
+  }
+}
+
+.floating-graph-card-title {
+  font-weight: @font-weight-medium;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.floating-graph-card-title-value {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.floating-graph-card-title-growth {
+  display: flex;
+  align-items: center;
+  color: @green-5;
+  font-weight: @font-weight-medium;
+  margin-top: 4px;
+  font-size: @font-size-lg;
+
+  &.down {
+    color: @secondary-color;
+  }
+}
+
+.floating-graph-card-title-growth-arrow {
+  font-weight: @font-weight-light;
+  font-size: @font-size-lg;
+}
+
+.floating-graph-card-title-growth-value {
+  margin-left: 4px;
+  margin-bottom: 4px;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 4px;
+  }
+}
+
+.floating-graph {
+  margin: -8px -20px -20px;
+}

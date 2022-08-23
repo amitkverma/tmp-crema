@@ -1,0 +1,207 @@
+@import '../../../shared/styles/variable';
+@import '../../../shared/styles/mixin';
+
+.user-morden {
+  flex: 1;
+}
+
+.user-morden-card {
+  margin-bottom: 20px;
+
+  & .ant-card-body {
+    padding: 20px;
+  }
+}
+
+.user-morden-row {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: @screen-sm) {
+    flex-direction: row;
+  }
+}
+
+.user-morden-thumb {
+  margin-bottom: 12px;
+
+  @media screen and (min-width: @screen-sm) {
+    margin-bottom: 0;
+    margin-right: 20px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 20px;
+    }
+  }
+
+  & img {
+    border-radius: @border-radius-circle;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+
+    @media screen and (min-width: @screen-sm) {
+      width: 130px;
+      height: 130px;
+    }
+  }
+}
+
+.user-morden-content {
+  flex: 1;
+}
+
+.user-morden-header {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  color: @text-color-secondary;
+
+  @media screen and (min-width: @screen-sm) {
+    flex-direction: row;
+  }
+
+  & h3 {
+    margin-bottom: 8px;
+    font-size: @font-size-lg;
+    font-weight: @font-weight-bold;
+
+    @media screen and (min-width: @screen-sm) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.user-morden-header-action {
+  margin-left: -16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: @text-color-secondary;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: -16px;
+  }
+
+  @media screen and (min-width: @screen-sm) {
+    margin-left: auto;
+    margin-right: -16px;
+    justify-content: flex-end;
+
+    [dir=rtl] & {
+      margin-left: -16px;
+      margin-right: auto;
+    }
+  }
+}
+
+.user-morden-header-action-item {
+  margin-left: 16px;
+  margin-right: 16px;
+  font-size: 20px;
+}
+
+.user-morden-para {
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+  margin-bottom: 16px;
+
+  @media screen and (min-width: @screen-lg) {
+    padding-right: 24px;
+
+    [dir=rtl] & {
+      padding-right: 0;
+      padding-left: 24px;
+    }
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    padding-right: 64px;
+
+    [dir=rtl] & {
+      padding-right: 0;
+      padding-left: 64px;
+    }
+  }
+}
+
+.user-morden-footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: @screen-md) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.user-morden-footer-chip-view {
+  margin-left: -4px;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: -4px;
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-left: -8px;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: -8px;
+    }
+  }
+}
+
+.user-morden-footer-chip {
+  background-color: darken(@component-background, 6.6);
+  padding: 6px 24px;
+  margin: 8px 4px 0;
+  border: @border-style-base @border-width-base darken(@component-background, 38);
+  border-radius: 2px;
+  display: inline-block;
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  &.dark {
+    background-color: @grey-700;
+  }
+}
+
+.user-morden-footer-action {
+  position: relative;
+}
+
+.user-morden-footer-hire-btn {
+  margin-right: 20px;
+  margin-top: 8px;
+  padding: 9px 12px;
+  width: 96px;
+  font-weight: @font-weight-medium;
+  line-height: 1;
+  height: 32px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 20px;
+  }
+}
+
+.user-morden-footer-remove-btn {
+  background-color: @white;
+  color: @grey-500;
+  margin-top: 8px;
+  border: @border-width-base @border-style-base @grey-500;
+  padding: 9px 12px;
+  width: 96px;
+  font-weight: @font-weight-medium;
+  line-height: 1;
+  height: 32px;
+}

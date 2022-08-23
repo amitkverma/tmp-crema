@@ -1,0 +1,85 @@
+@import '../../../../shared/styles/variable';
+
+.crema-card-header {
+  margin-bottom: 16px;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-bottom: 24px;
+  }
+}
+
+.crema-user-info {
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
+  width: calc(100% - 25px);
+
+  [dir=rtl] & {
+    padding-right: 0;
+    padding-left: 8px;
+  }
+}
+
+.crema-logo {
+  width: 40px;
+  margin-right: 12px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+
+  @media screen and (min-width: @screen-md) {
+    margin-right: 14px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 14px;
+    }
+  }
+
+  & img {
+    width: 100%;
+  }
+}
+
+.crema-user-info-content {
+  font-size: @font-size-base;
+  width: calc(100% - 56px);
+
+  & p {
+    color: @text-color-white;
+    margin-bottom: 0;
+  }
+}
+
+.crema-title {
+  color: @text-color-white;
+  font-weight: @font-weight-bold;
+  font-size: @font-size-lg;
+  letter-spacing: 0.1em;
+  margin-bottom: 2px;
+}
+
+.crema-social-link {
+  margin-left: auto;
+  color: @text-color-white;
+  font-size: 20px;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+.crema-para {
+  color: @text-color-white;
+  margin-bottom: 4px;
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-bottom: 16px;
+  }
+}

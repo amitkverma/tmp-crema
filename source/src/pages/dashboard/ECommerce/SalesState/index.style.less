@@ -1,0 +1,56 @@
+@import '../../../../shared/styles/variable';
+
+.state-card {
+  color: @white;
+
+  & h3 {
+    color: @white;
+  }
+}
+
+.state-row {
+  display: flex;
+  align-items: center;
+}
+
+.state-thumb {
+  margin-right: 16px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 16px;
+  }
+
+  & img {
+    width: auto;
+
+    @media screen and (min-width: @screen-xl) {
+      width: 50px;
+    }
+
+    @media screen and (min-width: @screen-xxl) {
+      width: auto;
+    }
+  }
+}
+
+.state-content {
+  position: relative;
+  width: calc(100% - 70px);
+
+  @media screen and (min-width: @screen-xl) {
+    width: calc(100% - 62px);
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    width: calc(100% - 70px);
+  }
+
+  & h3 {
+    margin-bottom: 2px;
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}

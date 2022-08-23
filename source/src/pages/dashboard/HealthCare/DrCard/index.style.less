@@ -1,0 +1,70 @@
+@import '../../../../shared/styles/variable';
+
+.dr-card {
+  color: @text-color-white;
+}
+
+.dr-card-info {
+  display: flex;
+}
+
+.dr-thumb {
+  align-self: center;
+  margin-right: 12px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+}
+
+.dr-card-content {
+  width: calc(100% - 45px);
+  display: flex;
+  align-items: center;
+}
+
+.dr-card-content-main {
+  flex: 1;
+  overflow: hidden;
+  margin-right: 8px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+
+  & h5 {
+    font-size: @font-size-base;
+    font-weight: @font-weight-bold;
+    color: @text-color-white;
+    margin-bottom: 2px;
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.dr-time {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  border-radius: @border-radius-circle;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-weight: @font-weight-medium;
+  color: @text-color-secondary;
+  background-color: @component-background;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  @media screen and (max-width: 1600px) and (min-width: 1200px) {
+    display: none;
+  }
+}
+

@@ -1,0 +1,38 @@
+@import '../../../../shared/styles/variable';
+
+.comparison-card {
+  overflow: hidden;
+}
+
+.comparison-card-info {
+  position: relative;
+}
+
+.comparison-card-content {
+  padding: 20px 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  [dir=rtl] & {
+    left: auto;
+    right: 0;
+  }
+
+  & p {
+    margin-bottom: 16px;
+    font-weight: @font-weight-bold;
+    font-size: @font-size-lg;
+  }
+
+  & h3 {
+    font-size: 20px;
+    font-weight: @font-weight-medium;
+  }
+}
+
+.comparison-card-graph-view {
+  position: relative;
+  margin-bottom: -16px;
+  padding-top: 16px;
+}

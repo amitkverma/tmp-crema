@@ -1,0 +1,88 @@
+@import '../../../../../shared/styles/variable';
+@import '../../../../../shared/styles/mixin';
+
+.scrum-col {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrum-board-add-btn-card {
+  margin-top: 8px;
+  min-height: 72px;
+  cursor: pointer;
+
+  & > .ant-card-body {
+    padding: 16px 24px;
+  }
+}
+
+.scrum-board-add-btn-card-user {
+  display: flex;
+  align-items: center;
+}
+
+.scrum-board-add-btn-card-user-avatar {
+  background-color: @grey-100;
+  border: @border-width-base @border-style-base @border-color-base;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrum-board-add-btn-card-user-add-icon {
+  color: @text-color-disabled;
+  font-weight: @font-weight-light;
+  font-size: 20px;
+  display: block;
+}
+
+.scrum-board-add-btn-card-user-text {
+  margin-left: 12px;
+  font-weight: @font-weight-regular;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+}
+
+.scrum-board-list-header-card {
+  margin-bottom: 8px;
+
+  & .ant-card-body {
+    padding: 10px 24px;
+  }
+}
+
+.scrum-board-list-header-flex {
+  display: flex;
+  align-items: center;
+
+  & h5 {
+    font-size: 15px;
+    font-weight: @font-weight-medium;
+    margin-bottom: 0;
+  }
+}
+
+.scrum-board-list-header-flex-auto {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+.scrum-board-list-header-input {
+  margin-right: 12px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+}

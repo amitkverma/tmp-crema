@@ -1,0 +1,33 @@
+@import '../../../../shared/styles/variable';
+
+.metrics-sales-card {
+  overflow: hidden;
+
+  & .ant-card-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & h2 {
+    margin-bottom: 8px;
+    color: @text-color-secondary;
+    font-weight: @font-weight-medium;
+    font-size: 24px;
+
+    @media screen and (min-width: @screen-md) {
+      font-size: 38px;
+    }
+
+    @media screen and (min-width: @screen-xxl) {
+      font-size: 36px;
+    }
+  }
+
+  & p {
+    color: @secondary-color;
+  }
+}
+
+.metrics-sales-graph {
+  margin-top: auto;
+}

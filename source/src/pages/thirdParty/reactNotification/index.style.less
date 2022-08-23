@@ -1,0 +1,130 @@
+@import '../../../shared/styles/variable';
+@import '../../../shared/styles/mixin';
+
+.react-notification {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.react-notification-item {
+  margin: 4px;
+}
+
+.notification-custom-icon {
+  flex-basis: 20%;
+  position: relative;
+  padding: 8px 8px 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  [dir=rtl] & {
+    padding: 8px 12px 8px 8px;
+  }
+
+  & .anticon {
+    color: @white;
+    font-size: 28px;
+  }
+}
+
+.notification-custom-content {
+  flex-basis: 80%;
+  padding: 12px 12px 12px 8px;
+  display: inline-block;
+
+  [dir=rtl] & {
+    padding: 12px 8px 12px 12px;
+  }
+}
+
+.notification-custom-success {
+  width: 100%;
+  display: flex;
+  background-color: @green-5;
+
+  & .notification-custom-icon {
+    border-left: 8px @border-style-base @green-8;
+
+    [dir=rtl] & {
+      border-left: 0 none;
+      border-right: 8px @border-style-base @green-8;
+    }
+  }
+}
+
+.notification-custom-default {
+  width: 100%;
+  display: flex;
+  background-color: @blue-6;
+
+  & .notification-custom-icon {
+    border-left: 8px @border-style-base @blue-8;
+
+    [dir=rtl] & {
+      border-left: 0 none;
+      border-right: 8px @border-style-base @blue-8;
+    }
+  }
+}
+
+.notification-custom-danger {
+  width: 100%;
+  display: flex;
+  background-color: @pink-5;
+
+  & .notification-custom-icon {
+    border-left: 8px @border-style-base @pink-8;
+
+    [dir=rtl] & {
+      border-left: 0 none;
+      border-right: 8px @border-style-base @pink-8;
+    }
+  }
+}
+
+.notification-custom-info {
+  width: 100%;
+  display: flex;
+  background-color: @cyan-5;
+
+  & .notification-custom-icon {
+    border-left: 8px @border-style-base @cyan-8;
+
+    [dir=rtl] & {
+      border-left: 0 none;
+      border-right: 8px @border-style-base @cyan-8;
+    }
+  }
+}
+
+.notification-custom-warning {
+  width: 100%;
+  display: flex;
+  background-color: @yellow-7;
+
+  & .notification-custom-icon {
+    border-left: 8px @border-style-base @yellow-10;
+
+    [dir=rtl] & {
+      border-left: 0 none;
+      border-right: 8px @border-style-base @yellow-10;
+    }
+  }
+}
+
+.notification-custom-image {
+  background-color: @white;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.notification-custom-image-content {
+  padding: 8px 32px;
+}
+
+.notification-inset-btn {
+  margin: 4px 8px;
+}

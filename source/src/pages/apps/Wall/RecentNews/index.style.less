@@ -1,0 +1,57 @@
+@import '../../../../shared/styles/variable';
+
+.recent-news {
+  position: relative;
+
+  & .ant-card-actions {
+    background-color: transparent;
+  }
+}
+
+.recent-news-link {
+  color: @primary-color;
+  text-align: center;
+}
+
+.recent-news-item {
+  display: flex;
+  padding: 8px 20px;
+}
+
+.recent-news-avatar {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+}
+
+.recent-news-item-content {
+  margin-left: 14px;
+  flex: 1;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 14px;
+  }
+
+  & h4 {
+    margin-bottom: 2px;
+    font-weight: @font-weight-medium;
+    font-size: @font-size-base;
+  }
+
+  & p {
+    margin-bottom: 0;
+    color: @text-color-secondary;
+  }
+}
+
+.recent-news-item-link {
+  margin-left: 8px;
+  color: @primary-color;
+  cursor: pointer;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 8px;
+  }
+}

@@ -1,0 +1,161 @@
+@import '../../../shared/styles/variable';
+@import '../../../shared/styles/mixin';
+
+//.checkout-title {
+//  font-size: @font-size-lg;
+//  font-weight: @font-weight-bold;
+//  color: @text-color;
+//  margin-bottom: 24px;
+//}
+
+.checkout-card-title {
+  font-size: @font-size-lg;
+  font-weight: @font-weight-bold;
+  margin-bottom: 0;
+}
+
+.payment-info-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.pay-radio-mod {
+  font-weight: @font-weight-medium;
+}
+
+.pay-mode-content {
+  position: relative;
+  margin-top: 16px;
+  color: @text-color-secondary;
+
+  & p {
+    margin-bottom: 0;
+  }
+
+  & .form-field {
+    margin-bottom: 10px;
+  }
+}
+
+.pay-mode-form-field {
+  display: flex;
+  margin-left: -6px;
+  margin-right: -6px;
+
+  & .form-field {
+    margin-bottom: 10px;
+    width: 50%;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+
+.delivery-address-cell {
+  padding: 18px 20px 10px;
+  margin-bottom: 16px;
+  border: @border-style-base @border-width-base @border-color-base;
+  border-radius: @card-radius;
+}
+
+.delivery-address-row {
+  display: flex;
+  font-size: @font-size-base;
+  font-weight: @font-weight-medium;
+  flex-direction: column;
+  position: relative;
+  padding-right: 45px;
+  margin-bottom: 5px;
+
+  [dir=rtl] & {
+    padding-right: 0;
+    padding-left: 45px;
+  }
+
+  @media screen and (min-width: @screen-sm) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  & p {
+    margin-left: 40px;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: 40px;
+    }
+
+    @media screen and (min-width: @screen-sm) {
+      margin-left: 0;
+
+      [dir=rtl] & {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.delivery-radio {
+  position: relative;
+
+  & .ant-radio {
+    margin-right: 8px;
+    margin-left: 8px;
+
+    @media screen and (min-width: @screen-md) {
+      margin-right: 24px;
+
+      [dir=rtl] & {
+        margin-right: 8px;
+        margin-left: 24px;
+      }
+    }
+  }
+}
+
+.delivery-edit-btn {
+  background-color: transparent;
+  color: @text-color;
+  .box-shadow(none);
+  border: 0 none;
+  border-radius: @border-radius-circle;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  [dir=rtl] & {
+    right: auto;
+    left: 0;
+  }
+}
+
+.delivery-address-item {
+  font-size: @font-size-base;
+  font-weight: @font-weight-regular;
+  margin-left: 40px;
+  margin-bottom: 16px;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 40px;
+  }
+
+  @media screen and (min-width: @screen-md) {
+    margin-left: 56px;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: 56px;
+    }
+  }
+
+  & .ant-btn {
+    height: 36px;
+  }
+}
+
+.checkout-order-summary {
+  margin-bottom: 32px;
+}

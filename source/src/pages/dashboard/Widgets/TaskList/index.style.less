@@ -1,0 +1,29 @@
+@import '../../../../shared/styles/variable';
+
+.task-list-scrollbar {
+  height: 220px;
+
+  @media screen and (min-width: @screen-lg) {
+    height: 320px;
+  }
+}
+
+.task-item {
+  padding: 8px 20px;
+  border-bottom: 0 none !important;
+  color: @text-color-secondary;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  & h3 {
+    color: @primary-color;
+    font-size: @font-size-base;
+    font-weight: @font-weight-medium;
+    margin-bottom: 0;
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}

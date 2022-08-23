@@ -1,0 +1,129 @@
+@import '../../../../shared/styles/variable';
+@import '../../../../shared/styles/mixin';
+
+.scrum-board-wrap {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.scrum-board-header {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-bottom: 32px;
+    margin-top: 32px;
+  }
+
+  & h2 {
+    color: @text-color;
+    font-weight: @font-weight-bold;
+    font-size: @font-size-lg;
+    margin-bottom: 0;
+  }
+}
+
+.scrum-board-container {
+  justify-content: center;
+}
+
+.scrum-board-add-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: @card-radius;
+  cursor: pointer;
+  background-color: @component-background;
+  height: 224px;
+  border: dashed 2px @grey-600;
+
+  & .ant-card-body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.scrum-board-add-card-icon {
+  background-color: @grey-500;
+  color: @text-color-white;
+  border-radius: @border-radius-circle;
+  margin-bottom: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & svg {
+    font-size: 24px;
+
+    @media screen and (min-width: @screen-xxl) {
+      font-size: 40px;
+    }
+  }
+}
+
+.scrum-board-add-card-text,
+.scrum-board-card-text {
+  margin-bottom: 0;
+  font-size: @font-size-base;
+  font-weight: @font-weight-medium;
+}
+
+.scrum-board-card {
+  border-radius: @card-radius;
+  background-color: @primary-color;
+  color: @text-color-white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 224px;
+
+  & .ant-card-body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.scrum-board-list-icon {
+  margin-bottom: 25px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+
+  & svg:not(:first-child) {
+    margin-left: 20px;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: 20px;
+    }
+  }
+}
+
+.scrum-add-board-modal {
+  position: relative;
+}
+
+.scrum-add-board-card {
+  & .ant-card-body {
+    padding: 0;
+  }
+}
+
+.scrum-add-board-card-footer-btn {
+  width: 94px;
+}

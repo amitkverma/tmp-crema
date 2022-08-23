@@ -1,0 +1,61 @@
+@import '../../../../shared/styles/variable';
+
+.iconButton {
+  height: 30px;
+  width: 30px;
+}
+
+.notification-scrollBar {
+  height: 370px;
+}
+
+.notificationCell {
+  position: relative;
+  padding: 8px 20px;
+
+  & .ant-list-item-meta {
+    align-items: center;
+  }
+
+  & .ant-list-item-meta-avatar {
+    margin-right: 16px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 16px;
+    }
+  }
+
+  & .ant-avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  & h4 {
+    color: @text-color;
+    margin-bottom: 2px;
+    font-size: @font-size-base;
+    font-weight: @font-weight-medium;
+  }
+
+  & p {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: @font-size-base;
+    color: @text-color-secondary;
+    margin-bottom: 0;
+
+    & span {
+      display: block;
+      margin-right: 8px;
+      color: @primary-color;
+
+      [dir=rtl] & {
+        margin-right: 0;
+        margin-left: 8px;
+      }
+    }
+  }
+}
+

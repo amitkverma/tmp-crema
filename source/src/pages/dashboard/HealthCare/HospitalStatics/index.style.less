@@ -1,0 +1,36 @@
+@import '../../../../shared/styles/variable';
+
+.hospital-statics {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  @media screen and (min-width: @screen-xxl) {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+.hospital-statics-thumb {
+  margin-right: 16px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 16px;
+  }
+}
+
+.hospital-statics-content {
+  width: calc(100% - 70px);
+
+  & .title {
+    font-size: @font-size-lg;
+    margin-bottom: 2px;
+  }
+
+  & p {
+    margin-bottom: 0;
+    color: @text-color-secondary;
+  }
+}
+

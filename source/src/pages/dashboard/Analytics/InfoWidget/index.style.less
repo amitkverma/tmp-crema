@@ -1,0 +1,51 @@
+@import '../../../../shared/styles/variable';
+
+.ana-info-widget-card {
+  & .ant-card-body {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+.ana-info-widget-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.ana-info-widget-img {
+  margin-bottom: 16px;
+  width: 60px;
+  height: 60px;
+
+  @media screen and (min-width: @screen-md) {
+    width: 70px;
+    height: 70px;
+  }
+
+  @media screen and (min-width: @screen-xl) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.ana-info-widget-content {
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+
+  & h3 {
+    font-weight: @font-weight-medium;
+    font-size: 18px;
+    color: @heading-color;
+    margin-bottom: 0;
+  }
+
+  & p {
+    margin-bottom: 0;
+    text-align: center;
+    color: @text-color-secondary;
+  }
+}

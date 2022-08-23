@@ -1,0 +1,144 @@
+@import '../../../../shared/styles/variable';
+
+.chat-user-info {
+  display: flex;
+  align-items: center;
+}
+
+.chat-user-avatar-view {
+  position: relative;
+}
+
+.chat-user-avatar {
+  height: 45px;
+  width: 45px;
+  font-size: 24px;
+  background-color: @orange-5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-user-status {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+
+  [dir=rtl] & {
+    right: auto;
+    left: 0;
+  }
+
+  & .ant-dropdown-link {
+    width: 12px;
+    height: 12px;
+    color: @text-color;
+    font-size: 9px;
+    border-radius: @border-radius-circle;
+    background-color: @component-background;
+    border: @border-style-base @border-width-base @divider-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    @media screen and (min-width: @screen-xxl) {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &:hover {
+    & .ant-dropdown-link {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    & .chat-user-status-dot {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+.chat-user-status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: @border-radius-circle;
+  border: @border-style-base @border-width-base @white;
+  display: block;
+  transition: all 0.3s ease;
+
+  @media screen and (min-width: @screen-xxl) {
+    width: 14px;
+    height: 14px;
+  }
+
+  &.chat-user-status-dot-only {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    [dir=rtl] & {
+      right: auto;
+      left: 0;
+    }
+  }
+}
+
+.chat-user-info-content {
+  padding-left: 14px;
+  width: calc(100% - 45px);
+
+  [dir=rtl] & {
+    padding-left: 0;
+    padding-right: 16px;
+  }
+}
+
+.chat-user-name {
+  font-size: @font-size-base;
+  font-weight: @font-weight-medium;
+  margin-bottom: 2px;
+}
+
+.chat-user-status-text {
+  color: @text-color-secondary;
+  font-size: @font-size-base;
+}
+
+.status-active-menu {
+  position: relative;
+
+  & .icon {
+    margin-right: 8px;
+    font-size: 20px;
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+  }
+
+  & .ant-dropdown-menu-title-content {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  & .ant-dropdown-menu-item {
+
+    &.active .icon {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

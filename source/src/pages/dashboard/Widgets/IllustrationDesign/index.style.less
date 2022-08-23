@@ -1,0 +1,96 @@
+@import '../../../../shared/styles/variable';
+
+.illustration-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.illustration-img-header {
+  position: relative;
+  flex: 1;
+  display: flex;
+
+  & .img-full {
+    width: 100%;
+  }
+}
+
+.illustration-badge {
+  background-color: @primary-color;
+  color: @text-color-white;
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  font-weight: @font-weight-light;
+  text-transform: capitalize;
+  font-size: @font-size-lg;
+  padding: 4px 12px;
+  border-radius: 30px;
+
+  [dir=rtl] & {
+    left: auto;
+    right: 16px;
+  }
+
+  @media screen and (min-width: @screen-sm) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: @screen-xxl) {
+    left: 24px;
+    bottom: 24px;
+
+    [dir=rtl] & {
+      left: auto;
+      right: 24px;
+    }
+  }
+}
+
+.illustration-content {
+  padding: 20px;
+  @media screen and (min-width: @screen-xxl) {
+    padding: 24px;
+  }
+
+  & h4 {
+    margin-bottom: 16px;
+    font-size: @font-size-lg;
+    font-weight: @font-weight-bold;
+  }
+}
+
+.ill-divider {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.illustration-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: @font-size-base;
+  font-weight: @font-weight-medium;
+  color: @text-color-secondary;
+}
+
+.illustration-action-item {
+  padding-left: 12px;
+  padding-right: 12px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ill-middle-icon {
+  font-size: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
+  display: inline-block;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+}

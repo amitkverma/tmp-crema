@@ -1,0 +1,24 @@
+@import '../../../../shared/styles/variable';
+
+.dropbox {
+  height: 180px;
+  line-height: 1.5;
+}
+
+.ant-form-item .ant-form-item-label {
+
+  @media screen and (max-width: @screen-xs-max) {
+    line-height: 1.5715;
+    padding: 0 0 8px;
+    text-align: left;
+    white-space: normal;
+  }
+}
+
+.ant-form .ant-form-item .ant-form-item-control, .ant-form .ant-form-item .ant-form-item-label {
+
+  @media screen and (max-width: @screen-xs-max) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

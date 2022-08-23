@@ -1,0 +1,110 @@
+@import '../../../../shared/styles/variable';
+
+.total-revenue-card {
+  overflow: hidden;
+  height: calc(100% - 38px);
+
+  & .ant-card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+.revenue-row {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  @media screen and (min-width: @screen-sm) {
+    flex-direction: row;
+  }
+}
+
+.revenue-graph {
+  margin-left: auto;
+  margin-bottom: -24px;
+  width: 100%;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-bottom: -8px;
+  }
+}
+
+.revenue-content {
+  margin-right: 8px;
+  background-color: fade(@primary-color, 10);
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-right: 40px;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: 40px;
+    }
+  }
+
+  & h3 {
+    color: @heading-color;
+    font-weight: @font-weight-medium;
+    font-size: 18px;
+    margin-bottom: 3px;
+  }
+
+  & p {
+    margin-bottom: 0;
+    font-size: @font-size-base;
+    color: @text-color-secondary;
+  }
+}
+
+.revenue-content-top {
+  margin-bottom: 16px;
+}
+
+.revenue-content-bottom {
+  display: flex;
+  margin: auto -8px 4px;
+
+  @media screen and (min-width: @screen-xxl) {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+.revenue-content-item {
+  padding-left: 8px;
+  padding-right: 8px;
+
+  @media screen and (min-width: @screen-xxl) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.revenue-chart {
+  height: 208px !important;
+
+  @media screen and (min-width: @screen-xxl) {
+    height: 193px !important;
+  }
+}
+
+.revenue-tooltip-text {
+  display: inline-block;
+  padding: 4px 16px 2px;
+  color: @primary-color;
+}
+

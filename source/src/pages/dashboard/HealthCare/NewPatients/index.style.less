@@ -1,0 +1,36 @@
+@import '../../../../shared/styles/variable';
+
+.patients-card {
+  overflow: hidden;
+}
+
+.patients-content {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.patients-number {
+  margin-right: 8px;
+  font-size: 20px;
+  font-weight: @font-weight-bold;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+}
+
+.patients-arrow-icon {
+  & img {
+    height: 12px;
+  }
+}
+
+.patients-graph {
+  margin: 0 -20px -20px;
+}
+
+.patients-graph-color {
+  stop-color: @primary-color;
+}

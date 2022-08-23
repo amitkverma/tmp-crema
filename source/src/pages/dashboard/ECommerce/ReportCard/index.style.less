@@ -1,0 +1,39 @@
+@import '../../../../shared/styles/variable';
+
+.report-card {
+  overflow: hidden;
+}
+
+.report {
+  &-flex {
+    display: flex;
+  }
+
+  &-content {
+    flex: 1;
+    padding-right: 12px;
+    color: @text-color-secondary;
+
+    [dir=rtl] & {
+      padding-right: 0;
+      padding-left: 12px;
+    }
+
+    & h3 {
+      font-size: 20px;
+      margin-bottom: 2px;
+    }
+  }
+}
+
+.reChartContainer {
+  min-width: 150px;
+  max-width: 160px;
+}
+
+.reChartAction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: @font-weight-bold;
+}

@@ -1,0 +1,81 @@
+@import '../../../../shared/styles/variable';
+
+.active-visitor-graph-wrap {
+  padding-top: 20px;
+  border-radius: @card-radius @card-radius 0 0;
+  background-color: rgb(73, 189, 101);
+}
+
+.active-visitor-graph-header {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  & h3 {
+    color: @text-color-white;
+    margin-bottom: 8px;
+    font-weight: @font-weight-bold;
+    font-size: @font-size-lg;
+  }
+
+  & p {
+    margin-bottom: 0;
+    color: fade(@text-color-white, 70);
+  }
+}
+
+.active-visitor-graph {
+  margin-top: auto;
+}
+
+.active-visitor-content {
+  padding: 20px 24px;
+}
+
+.active-visitor-content-header {
+  margin-bottom: 2px;
+
+  & h3 {
+    display: inline-block;
+    font-weight: @font-weight-medium;
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  & span {
+    margin-left: 12px;
+    font-size: @font-size-lg;
+    font-weight: @font-weight-medium;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: 12px;
+    }
+  }
+
+  & p {
+    font-size: @font-size-base;
+    color: @text-color-secondary;
+    margin-bottom: 4px;
+  }
+}
+
+.active-visitor-footer {
+  text-align: right;
+
+  [dir=rtl] & {
+    text-align: left;
+  }
+}
+
+.active-visitor-link {
+  color: @secondary-color;
+  font-size: @font-size-lg;
+  margin-top: 6px;
+  @media screen and (min-width: @screen-xxl) {
+    margin-top: 16px;
+  }
+
+  &:hover, &:focus {
+    color: @secondary-color;
+  }
+}

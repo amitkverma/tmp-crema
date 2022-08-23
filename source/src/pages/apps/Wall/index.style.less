@@ -1,0 +1,41 @@
+@import '../../../shared/styles/variable';
+
+.wall-left-sidebar {
+  margin-bottom: 0 !important;
+  height: 100%;
+
+  @media screen and (min-width: 768px) and (max-width: 1020px) {
+    flex-basis: 40%;
+    max-width: 40%;
+  }
+
+  @media screen and (max-width: @screen-sm-max) {
+    display: none;
+  }
+}
+
+.wall-main-content {
+  margin-bottom: 0 !important;
+  height: 100%;
+
+  @media screen and (min-width: 768px) and (max-width: 1020px) {
+    flex-basis: 60%;
+    max-width: 60%;
+  }
+}
+
+.wall-right-sidebar {
+  margin-bottom: 0 !important;
+  height: 100%;
+
+  @media screen and (max-width: 1020px) {
+    display: none;
+  }
+}
+
+.wall-scrollbar {
+  & .ps--active-x > .ps__rail-x,
+  & .ps--active-y > .ps__rail-y {
+    z-index: 1;
+  }
+}

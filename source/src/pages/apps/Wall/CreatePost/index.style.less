@@ -1,0 +1,112 @@
+@import '../../../../shared/styles/variable';
+@import '../../../../shared/styles/mixin';
+
+.create-post-card {
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.create-post-main {
+  display: flex;
+}
+
+.create-post-main-content {
+  margin-left: 14px;
+  flex: 1;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: 14px;
+  }
+}
+
+.create-post-input {
+  font-size: @font-size-lg;
+  border-radius: 30px;
+  padding: 1px 5px 1px 14px;
+  overflow: hidden;
+
+  @media screen and (max-width: 479px) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    border-radius: @card-radius;
+
+    & .ant-input-suffix {
+      margin-left: -8px;
+
+      [dir=rtl] & {
+        margin-left: 0;
+        margin-right: -8px;
+      }
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.create-post-img-list {
+  margin-bottom: 8px;
+  display: flex !important;
+  flex-wrap: wrap;
+  flex-direction: row !important;
+}
+
+.create-post-img-item {
+  padding: 4px;
+
+  & img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+}
+
+.create-post-action {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.create-post-action-btn {
+  border: 0 none;
+  color: @text-color-secondary;
+  background-color: transparent;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: @border-radius-circle;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: fade(@black, 5);
+    color: @text-color;
+  }
+
+  &.active {
+    color: @primary-color;
+
+    &:hover, &:focus {
+      background-color: fade(@black, 5);
+      color: @primary-color;
+    }
+  }
+
+  & svg {
+    display: block;
+    font-size: 18px;
+
+    @media screen and (min-width: @screen-xxl) {
+      font-size: 20px;
+    }
+  }
+}

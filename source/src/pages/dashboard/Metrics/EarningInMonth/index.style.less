@@ -1,0 +1,80 @@
+@import '../../../../shared/styles/variable';
+
+.earning-month-card {
+  & .ant-card-actions {
+    padding: 8px 20px 16px;
+    border-top: 0 none;
+    background-color: transparent;
+
+    & li {
+      margin: 0;
+    }
+  }
+}
+
+.earning-month-graph-view {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.earning-month-graph {
+  width: 260px !important;
+  height: 260px !important;
+  align-self: center;
+
+  & .recharts-surface {
+    width: 260px !important;
+    height: 260px !important;
+  }
+}
+
+.earning-month-categories {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: @screen-xxl) {
+    padding-left: 20px;
+
+    [dir=rtl] & {
+      padding-left: 0;
+      padding-right: 20px;
+    }
+  }
+}
+
+.earning-month-categories-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding-left: 12px;
+  padding-right: 12px;
+
+  & .dot {
+    padding: 4px;
+
+    @media screen and (min-width: @screen-xxl) {
+      height: 16px;
+      width: 16px;
+    }
+  }
+
+  & p {
+    color: @text-color-secondary;
+    margin-left: 12px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+
+    [dir=rtl] & {
+      margin-left: 0;
+      margin-right: 12px;
+    }
+  }
+}
+

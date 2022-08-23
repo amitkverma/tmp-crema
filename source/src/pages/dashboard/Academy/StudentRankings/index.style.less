@@ -1,0 +1,84 @@
+@import '../../../../shared/styles/variable';
+
+.student-ranking-table {
+
+  & .ant-table-thead > tr > th {
+    font-size: 13px;
+    padding: 8px;
+    font-weight: @font-weight-bold;
+    background-color: transparent;
+
+    &:first-child {
+      padding-left: 20px;
+
+      [dir=rtl] & {
+        padding-left: 0;
+        padding-right: 20px;
+      }
+    }
+
+    &:last-child {
+      padding-right: 20px;
+
+      [dir=rtl] & {
+        padding-right: 0;
+        padding-left: 20px;
+      }
+    }
+  }
+
+  & .ant-table-tbody > tr > td {
+    font-size: 13px;
+    padding: 14px 8px;
+
+    &:first-child {
+      padding-left: 20px;
+
+      [dir=rtl] & {
+        padding-left: 0;
+        padding-right: 20px;
+      }
+    }
+
+    &:last-child {
+      padding-right: 20px;
+
+      [dir=rtl] & {
+        padding-right: 0;
+        padding-left: 20px;
+      }
+    }
+  }
+
+  & .badge {
+    padding: 4px 12px;
+    border-radius: 30px;
+    display: block;
+    max-width: 115px;
+    color: #D69D5A;
+    background-color: #FEF1E4;
+    text-align: center;
+    font-weight: @font-weight-medium;
+  }
+}
+
+.student-info {
+  display: flex;
+  align-items: center;
+}
+
+.student-avatar {
+  margin-right: 14px;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: 14px;
+  }
+}
+
+.student-title {
+  font-size: 13px;
+  font-weight: @font-weight-medium;
+  margin-bottom: 0;
+}
+
